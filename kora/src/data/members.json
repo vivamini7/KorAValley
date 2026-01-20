@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "조예찬",
+    "role": "AI",
+    "avatar": "image15.png",
+    "quote": "사람들이 소소한 것에서도 행복을\n느끼며 살 수 있게 하고 싶어요",
+    "bullets": [
+      "Medical+AI 스타트업에서 일",
+      "사이드 프로젝트 개발",
+      "독서모임 운영"
+    ],
+    "achievements": [
+      "메롱"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/your-id",
+      "email": "someone@gmail.com",
+      "notion": "https://notion.so/your-page",
+      "instagram": "https://instagram.com/your-id",
+      "medium": "https://medium.com/@your-id"
+    }
+  },
+  {
+    "id": 2,
+    "name": "천승범",
+    "role": "Developer",
+    "avatar": "image16.png",
+    "quote": "진로를 사회에서 부여받기 않고\n본인이 찾아가게 하고 싶어요",
+    "bullets": [
+      "Medical+AI 스타트업에서 일",
+      "사이드 프로젝트 개발",
+      "독서모임 운영"
+    ],
+    "achievements": [
+      "천승범 메롱"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "",
+      "notion": "",
+      "instagram": "",
+      "medium": ""
+    }
+  },
+  {
+    "id": 3,
+    "name": "조예찬",
+    "role": "Developer",
+    "avatar": "image17.png",
+    "quote": "사람들이 소소한 것에서도 행복을\n느끼며 살 수 있게 하고 싶어요",
+    "bullets": [
+      "Medical+AI 스타트업에서 일",
+      "사이드 프로젝트 개발",
+      "독서모임 운영"
+    ],
+    "achievements": [
+      "조예찬 바보"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    }
+  }
+]

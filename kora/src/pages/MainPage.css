@@ -1,0 +1,415 @@
+/* ========== Layout ========== */
+.mainpage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+/* ========== Space Background (UPDATED) ========== */
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(1100px 680px at 52% 32%, rgba(120, 150, 255, 0.18), rgba(10, 10, 24, 0.92) 62%),
+    radial-gradient(820px 560px at 18% 72%, rgba(210, 140, 255, 0.16), transparent 60%),
+    radial-gradient(760px 520px at 84% 78%, rgba(110, 220, 255, 0.12), transparent 58%),
+    radial-gradient(620px 480px at 72% 18%, rgba(255, 140, 200, 0.09), transparent 60%),
+    linear-gradient(180deg, #070a1c 0%, #03040a 100%);
+}
+
+/* ========== Flowing Lights ========== */
+.glow {
+  position: absolute;
+  inset: -45%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 600px at 30% 40%, rgba(150, 180, 255, 0.38), transparent 65%),
+    radial-gradient(820px 680px at 70% 65%, rgba(230, 170, 255, 0.32), transparent 68%);
+  animation: lightFlowMain 42s ease-in-out infinite;
+}
+
+.glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(520px 460px at 20% 70%, rgba(160, 230, 255, 0.24), transparent 62%),
+    radial-gradient(600px 520px at 80% 25%, rgba(255, 170, 220, 0.22), transparent 64%);
+  mix-blend-mode: screen;
+  animation: lightFlowSub 28s ease-in-out infinite alternate;
+}
+
+@keyframes lightFlowMain {
+  0%   { transform: translate(-6%, -4%) scale(1);    opacity: 0.75; }
+  20%  { transform: translate( 4%, -6%) scale(1.12); opacity: 0.95; }
+  45%  { transform: translate( 8%,  3%) scale(1.22); opacity: 1;    }
+  70%  { transform: translate(-2%,  6%) scale(1.15); opacity: 0.9;  }
+  100% { transform: translate(-6%, -4%) scale(1);    opacity: 0.75; }
+}
+
+@keyframes lightFlowSub {
+  0%   { transform: translate( 3%,  2%) scale(1);    opacity: 0.6;  }
+  35%  { transform: translate(-5%,  4%) scale(1.18); opacity: 0.85; }
+  65%  { transform: translate( 6%, -3%) scale(1.25); opacity: 0.95; }
+  100% { transform: translate( 3%,  2%) scale(1);    opacity: 0.6;  }
+}
+
+/* ========== Stars ========== */
+.mainpage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.42) 1.9px, transparent 4px),
+    radial-gradient(circle at 78% 22%, rgba(255,255,255,0.36) 1.7px, transparent 4px),
+    radial-gradient(circle at 64% 68%, rgba(255,255,255,0.40) 2.4px, transparent 5px),
+    radial-gradient(circle at 32% 74%, rgba(255,255,255,0.34) 2.0px, transparent 4.5px),
+    radial-gradient(circle at 90% 55%, rgba(255,255,255,0.28) 1.8px, transparent 4px),
+    radial-gradient(circle at 8% 62%,  rgba(255,255,255,0.26) 1.6px, transparent 3.8px),
+    radial-gradient(circle at 22% 46%, rgba(255,255,255,0.22) 1.2px, transparent 3px),
+    radial-gradient(circle at 55% 30%, rgba(255,255,255,0.18) 1.1px, transparent 2.8px),
+    radial-gradient(circle at 82% 54%, rgba(255,255,255,0.20) 1.3px, transparent 3px),
+    radial-gradient(circle at 44% 16%, rgba(255,255,255,0.16) 1.0px, transparent 2.6px),
+    radial-gradient(circle at 60% 86%, rgba(255,255,255,0.14) 0.9px, transparent 2.4px),
+    radial-gradient(circle at 15% 35%, rgba(255,255,255,0.08) 0.8px, transparent 2.2px),
+    radial-gradient(circle at 35% 55%, rgba(255,255,255,0.06) 0.7px, transparent 2.1px),
+    radial-gradient(circle at 70% 45%, rgba(255,255,255,0.06) 0.7px, transparent 2.1px),
+    radial-gradient(circle at 88% 28%, rgba(255,255,255,0.05) 0.6px, transparent 2px);
+  opacity: 0.65;
+  animation: starBreath 24s ease-in-out infinite;
+}
+
+@keyframes starBreath {
+  0%   { opacity: 0.58; }
+  50%  { opacity: 0.72; }
+  100% { opacity: 0.58; }
+}
+
+/* vignette */
+.mainpage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* 🌟 z-index를 2로 낮춰서 topbar(10)보다 뒤로 보냅니다 (로고 보호) */
+  z-index: 2; 
+  pointer-events: none;
+  background: radial-gradient(950px 560px at 50% 35%, transparent 44%, rgba(0, 0, 0, 0.70) 100%);
+}
+
+/* ========== Icons Layer (Responsive Scale 수정됨) ========== */
+.iconsLayer{
+  position: absolute;
+  inset: 0;
+  z-index: 1;          /* hero(2), topbar(3)보다 아래 */
+  pointer-events: none;
+}
+
+.icon{
+  position: absolute;
+
+  opacity: 0.12;                     /* 핵심: 배경 느낌 */
+  filter: blur(0.6px) saturate(0.7); /* 선명도 낮추기 */
+  mix-blend-mode: screen;            /* 우주 배경에 자연스럽게 */
+
+  animation: floaty 10s ease-in-out infinite;
+  transform: translateZ(0);
+}
+.icon:hover{
+  opacity: 0.12;
+  transform: none;
+  filter: blur(0.6px) saturate(0.7);
+}
+
+/* 🌟 개별 아이콘 크기에 clamp()를 적용하여 화면 크기에 반응하게 만듭니다.
+   형식: clamp(최소크기, 가변크기(vw), 최대크기) */
+/* ===== 상단 ===== */
+.icon-1{ left: 8%;  top: 18%; }
+.icon-2{ left: 28%; top: 14%; }
+.icon-3{ left: 48%; top: 20%; }
+.icon-4{ left: 68%; top: 16%; }
+.icon-5{ left: 86%; top: 22%; }
+
+/* ===== 하단 ===== */
+.icon-6{ left: 10%; top: 62%; }
+.icon-7{ left: 30%; top: 70%; }
+.icon-8{ left: 50%; top: 66%; }
+.icon-9{ left: 70%; top: 72%; }
+.icon-10{ left: 88%; top: 68%; }
+
+
+/* ========== Topbar (수정됨) ========== */
+.topbar {
+  position: relative;
+  /* 🌟 확실하게 최상단 레이어로 설정 */
+  z-index: 10; 
+  isolation: isolate;
+
+  height: 52px;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 🌟 배경 블러 효과를 추가하여 로고 주변 가독성을 높임 */
+  background: rgba(10, 12, 28, 0.15);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* brand */
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(140, 170, 255, 0.35), transparent 65%);
+  z-index: -1;
+}
+
+.brandText {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+.navItem {
+  color: rgba(220, 225, 255, 0.75);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.navItem:hover {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navItem.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* logo */
+.logoImg {
+  /* 🌟 화면 높이에 따라 로고 크기도 소폭 반응하도록 수정 */
+  width: clamp(90px, 10vw, 124px); 
+  height: auto;
+  object-fit: contain;
+
+  opacity: 1;
+  /* 🌟 밝기와 선명도를 올려서 배경에 묻히지 않게 함 */
+  filter:
+    brightness(1.2)
+    contrast(1.1)
+    drop-shadow(0 0 6px rgba(140, 170, 255, 0.45));
+
+  transition: transform 200ms ease, filter 200ms ease;
+}
+
+.brand:hover .logoImg {
+  transform: translateY(-1px) scale(1.03);
+  filter:
+    brightness(1.18)
+    contrast(1.10)
+    drop-shadow(0 0 8px rgba(160, 190, 255, 0.70))
+    drop-shadow(0 0 22px rgba(150, 170, 255, 0.35));
+}
+
+/* ========== Hero ========== */
+.hero {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  text-shadow: 0 12px 60px rgba(0,0,0,0.45);
+}
+
+.subtitle {
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.7;
+  color: rgba(255,255,255,0.68);
+  max-width: 720px;
+}
+
+/* ========== Buttons ========== */
+.ctaRow {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.btnPrimary {
+  background: rgba(85, 110, 255, 0.95);
+  color: white;
+  box-shadow: 0 18px 40px rgba(85, 110, 255, 0.25);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 55px rgba(85, 110, 255, 0.32);
+}
+
+.btnGhost {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.btnGhost:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.22);
+}
+
+/* ========== Responsive tweaks ========== */
+@media (max-width: 720px) {
+  .topbar { padding: 0 16px; }
+  .nav { gap: 10px; }
+  .navItem { font-size: 13px; padding: 6px 6px; }
+
+  /* 모바일에서 아이콘 너무 죽지 않게 */
+  .icon { opacity: 0.22; }
+}
+
+/* 상하좌우로 부드럽게 움직이는 애니메이션 */
+/* 1번 패턴: 좌상단 -> 우하단 부드러운 이동 */
+@keyframes floating-pattern-A {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(15px, -25px) rotate(3deg); }
+  66% { transform: translate(-10px, 15px) rotate(-3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* 2번 패턴: 원형을 그리듯 느릿한 이동 */
+@keyframes floating-pattern-B {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-25px, 20px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* 3번 패턴: 대각선 반전 이동 */
+@keyframes floating-pattern-C {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  40% { transform: translate(20px, 10px) rotate(-4deg); }
+  80% { transform: translate(-5px, -20px) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+/* 공통 아이콘 속성 */
+.icon {
+  position: absolute;
+  opacity: 0.58;
+  filter: blur(0.1px);
+  user-select: none;
+  transition: width 0.3s ease; /* 화면 크기 조절 시 부드럽게 */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* 아이콘 1 ~ 10 개별 설정 */
+.icon-1 { 
+  left: 10%; top: 22%; width: clamp(80px, 15vw, 170px); 
+  animation: floating-pattern-A 18s infinite; 
+}
+
+.icon-2 { 
+  left: 25%; top: 52%; width: clamp(70px, 12vw, 150px); 
+  animation: floating-pattern-B 22s infinite; 
+}
+
+.icon-3 { 
+  right: 18%; top: 28%; width: clamp(70px, 12vw, 140px); 
+  animation: floating-pattern-C 25s infinite; 
+}
+
+.icon-4 { 
+  right: 12%; top: 18%; width: clamp(80px, 14vw, 165px); 
+  animation: floating-pattern-A 20s infinite reverse; 
+}
+
+.icon-5 { 
+  right: 18%; top: 35%; width: clamp(120px, 20vw, 245px); 
+  animation: floating-pattern-B 28s infinite; 
+}
+
+.icon-6 { 
+  right: 27%; bottom: 18%; width: clamp(100px, 16vw, 200px); 
+  animation: floating-pattern-C 23s infinite reverse; 
+}
+
+.icon-7 { 
+  left: 15%; bottom: 25%; width: clamp(100px, 16vw, 200px); 
+  animation: floating-pattern-A 30s infinite; 
+}
+
+.icon-8 { 
+  right: 35%; bottom: 12%; width: clamp(100px, 16vw, 205px); 
+  animation: floating-pattern-B 26s infinite reverse; 
+}
+
+.icon-9 { 
+  left: 32%; bottom: 10%; width: clamp(100px, 16vw, 205px); 
+  animation: floating-pattern-C 32s infinite; 
+}
+
+.icon-10 { 
+  left: 40%; bottom: -5%; width: clamp(150px, 25vw, 285px); 
+  animation: floating-pattern-A 35s infinite; 
+}
