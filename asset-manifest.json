@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/KorAValley/static/css/main.c8d3a85a.css",
-    "main.js": "/KorAValley/static/js/main.c611c84b.js",
+    "main.js": "/KorAValley/static/js/main.ca95679f.js",
     "static/js/453.3f684051.chunk.js": "/KorAValley/static/js/453.3f684051.chunk.js",
     "static/media/image_hwang.png": "/KorAValley/static/media/image_hwang.aabdf76515f8002cb713.png",
     "static/media/image_park.png": "/KorAValley/static/media/image_park.3575b598dbdd50020075.png",
     "static/media/image_bae.png": "/KorAValley/static/media/image_bae.1d8bb19fb1d2288da883.png",
     "static/media/yoon.png": "/KorAValley/static/media/yoon.a11c9745a681932d1f41.png",
     "static/media/image_hong.png": "/KorAValley/static/media/image_hong.fd992945a2259a75fadf.png",
+    "static/media/image_kim_jh.png": "/KorAValley/static/media/image_kim_jh.c6f37ae557a3bfc80c1b.png",
+    "static/media/image_yu.png": "/KorAValley/static/media/image_yu.da657085ec1b16fe5146.png",
     "static/media/cheo.png": "/KorAValley/static/media/cheo.4b874242b94200f4834a.png",
     "static/media/zo.png": "/KorAValley/static/media/zo.b2e77ce12563b6e90319.png",
     "static/media/logo.png": "/KorAValley/static/media/logo.013b48491c7e48af033d.png",
@@ -23,11 +25,11 @@
     "static/media/image17.png": "/KorAValley/static/media/image17.426b2bab107d8f0c34bf.png",
     "index.html": "/KorAValley/index.html",
     "main.c8d3a85a.css.map": "/KorAValley/static/css/main.c8d3a85a.css.map",
-    "main.c611c84b.js.map": "/KorAValley/static/js/main.c611c84b.js.map",
+    "main.ca95679f.js.map": "/KorAValley/static/js/main.ca95679f.js.map",
     "453.3f684051.chunk.js.map": "/KorAValley/static/js/453.3f684051.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8d3a85a.css",
-    "static/js/main.c611c84b.js"
+    "static/js/main.ca95679f.js"
   ]
 }
