@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/KorAValley/static/css/main.52a8c6ae.css",
+    "main.css": "/KorAValley/static/css/main.c8d3a85a.css",
     "main.js": "/KorAValley/static/js/main.c611c84b.js",
     "static/js/453.3f684051.chunk.js": "/KorAValley/static/js/453.3f684051.chunk.js",
     "static/media/image_hwang.png": "/KorAValley/static/media/image_hwang.aabdf76515f8002cb713.png",
@@ -22,12 +22,12 @@
     "static/media/image20.png": "/KorAValley/static/media/image20.a1c2bd8f67e20ebf8816.png",
     "static/media/image17.png": "/KorAValley/static/media/image17.426b2bab107d8f0c34bf.png",
     "index.html": "/KorAValley/index.html",
-    "main.52a8c6ae.css.map": "/KorAValley/static/css/main.52a8c6ae.css.map",
+    "main.c8d3a85a.css.map": "/KorAValley/static/css/main.c8d3a85a.css.map",
     "main.c611c84b.js.map": "/KorAValley/static/js/main.c611c84b.js.map",
     "453.3f684051.chunk.js.map": "/KorAValley/static/js/453.3f684051.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52a8c6ae.css",
+    "static/css/main.c8d3a85a.css",
     "static/js/main.c611c84b.js"
   ]
 }
