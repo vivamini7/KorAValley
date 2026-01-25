@@ -1,0 +1,427 @@
+[
+  {
+    "id": 1,
+    "name": "천승범",
+    "role": "Develop",
+    "avatar": "cheo.png",
+    "quote": "청년들이 본인의 길을 선택하도록 돕는 것",
+    "bullets": [
+      "웹/앱 서비스 개발",
+      "사이드 프로젝트",
+      "독서모임 운영"
+    ],
+    "goals": [
+      "청년 자립 지원 시스템 구축",
+      "경제적/시간적 자유 달성"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "",
+      "notion": "",
+      "instagram": ""
+    },
+    "generation" : 0,
+    "group": "founding"
+  },
+  {
+    "id": 2,
+    "name": "조예찬",
+    "role": "Medical AI",
+    "avatar": "zo.png",
+    "quote": "사람들이 소소한 것에서도 행복을 느끼며 살 수 있는 것",
+    "bullets": [
+      "MRI + AI Research",
+      "음악 작곡 (J:IAN)",
+      "커뮤니티 빌딩"
+    ],
+    "goals": [
+      "CVPR 2027 논문 투고 (SHARP-Buffer)",
+      "NIH Summer Internship 합격"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "",
+      "notion": "",
+      "instagram": ""
+    },
+    "generation" : 0,
+    "group": "founding"
+  },
+  {
+    "id": 3,
+    "name": "신재욱",
+    "role": "Medical AI",
+    "avatar": "image_shin_jw.png",
+    "quote": "미래의 행복한 모습을 상상하는 것",
+    "bullets": [
+      "로보틱스 학습",
+      "의료 AI 프로젝트",
+      "미래 설계"
+    ],
+    "goals": [
+      "의료 로봇 분야 전문성 확보",
+      "행복한 미래 구체화"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 0
+  },
+  {
+    "id": 4,
+    "name": "서희찬",
+    "role": "Robotics",
+    "avatar": "image_seo.png",
+    "quote": "인류에 기여할 수 있는 삶을 사는 것",
+    "bullets": [
+      "로봇 제어 연구",
+      "웹/앱 개발",
+      "기술 사회 공헌"
+    ],
+    "goals": [
+      "인류 기여 로봇 기술 개발",
+      "웹/앱 서비스 확장"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 0
+  },
+  {
+    "id": 5,
+    "name": "윤상민",
+    "role": "HCI+AI",
+    "avatar": "yoon.png",
+    "quote": "모두가 공평한 기회를 누릴 수 있는 사회",
+    "bullets": [
+      "HCI+AI Researcher",
+      "Author & Reader",
+      "Social Entrepreneur"
+    ],
+    "goals": [
+      "HCI 연구실 진학",
+      "개인 단편 소설 출간 & 대회 수상",
+      "주식 분야별 공부, follow-up & 수익률 목표 달성",
+      "영어 시험 3개 고득점 마무리",
+      "2026ver 하루 루틴 - 오전 6시 기상, 7-9 경제공부, 19~ 운동, 독서, 영어공부",
+      "비영리 사업 계획 -> start-up"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "juneekeyun@gmail.com"
+    },
+    "generation" : 0
+  },
+  {
+    "id": 6,
+    "name": "신영진",
+    "role": "Engineering",
+    "avatar": "image_shin_yj.png",
+    "quote": "하루하루 성취의 재미를 느끼는 것",
+    "bullets": [
+      "전기전자 회로 설계",
+      "일상 기록",
+      "자기 계발"
+    ],
+    "goals": [
+      "매일의 성취를 통한 성장",
+      "전기전자 분야 커리어 발전"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 7,
+    "name": "김은지",
+    "role": "Business",
+    "avatar": "image_kim_ej.png",
+    "quote": "나의 경험을 통해 사람들에게 위로와 동기부여를 주는 것",
+    "bullets": [
+      "삼성전자 근무",
+      "직장인 멘토링",
+      "에세이 집필"
+    ],
+    "goals": [
+      "직장인 멘토링 활동 확장",
+      "동기부여 콘텐츠 제작"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 8,
+    "name": "정성민",
+    "role": "AI+Robotics",
+    "avatar": "image_jung.png",
+    "quote": "매일매일 성취감을 느끼며 행복한 노후를 보내는 것",
+    "bullets": [
+      "지능형 로봇 연구",
+      "석사 논문 작성",
+      "성취감 기록"
+    ],
+    "goals": [
+      "지능형 로봇 석사 학위 취득",
+      "행복한 노후 기반 마련"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 9,
+    "name": "김영준",
+    "role": "Economics",
+    "avatar": "image_kim_yj.png",
+    "quote": "주위에 선한 영향력을 끼치고 전 세계가 행복해지는 것",
+    "bullets": [
+      "금융 공학 연구",
+      "경제 모델링",
+      "봉사 활동"
+    ],
+    "goals": [
+      "선한 영향력 전파",
+      "글로벌 경제 연구 성과 도출"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 10,
+    "name": "이연희",
+    "role": "Biotech",
+    "avatar": "image_lee_yh.png",
+    "quote": "필요한 상황에 필요한 약을 필요한 사람에게 공급하는 것",
+    "bullets": [
+      "신약 개발 연구",
+      "의약품 유통 분석",
+      "바이오 트렌드 분석"
+    ],
+    "goals": [
+      "신약 개발 연구 참여",
+      "의약품 접근성 문제 해결"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 11,
+    "name": "최서연",
+    "role": "Business",
+    "avatar": "image_choi_sy.png",
+    "quote": "세상에 긍정적인 영향을 끼치는 것",
+    "bullets": [
+      "경영 전략 학회",
+      "노어노문 번역",
+      "소셜 임팩트 프로젝트"
+    ],
+    "goals": [
+      "소셜 임팩트 프로젝트 리딩",
+      "글로벌 비즈니스 역량 강화"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 12,
+    "name": "김진호",
+    "role": "Medical AI",
+    "avatar": "image_kim_jh.png",
+    "quote": "소외된 사람에게도 편의가 돌아가는 기술을 만드는 것",
+    "bullets": [
+      "뇌과학(Neurology) 연구",
+      "헬스케어 데이터 분석",
+      "기술 봉사"
+    ],
+    "goals": [
+      "소외 계층을 위한 AI 기술 구현",
+      "뇌과학 분야 심층 연구"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 1
+  },
+  {
+    "id": 13,
+    "name": "황서호",
+    "role": "Product Engineering",
+    "avatar": "image_hwang.png",
+    "quote": "최대 다수의 최대 행복",
+    "bullets": [
+      "Strategy & Development",
+      "Investment",
+      "Contemplation"
+    ],
+    "goals": [
+      "주식계좌 연간 수익률 20% 초과 달성",
+      "독서 24권 이상",
+      "사이드 프로덕트 출시/수익화",
+      "눈낮춤 없이 취직",
+      "체지방 15% 고정"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/seoho-hwang",
+      "email": "seoho38hwang@gmail.com"
+    },
+    "generation" : 2
+  },
+  {
+    "id": 14,
+    "name": "유재호",
+    "role": "Develop",
+    "avatar": "image_yu.png",
+    "quote": "가족의 안정과 평안을 이루어내는 것",
+    "bullets": [
+      "iOS 앱 개발",
+      "보드게임",
+      "기술 블로그 운영"
+    ],
+    "goals": [
+      "2026년 목표 초과 달성",
+      "iOS 개발 역량 심화",
+      "가족의 평안 유지"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 2
+  },
+  {
+    "id": 15,
+    "name": "박상준",
+    "role": "Climate Macroeconomics",
+    "avatar": "image_park.png",
+    "quote": "There is no wealth but life—life including all its powers of love, of joy, and of admiration",
+    "bullets": [
+      "Climate Macroeconomist", 
+      "Stock Investor", 
+      "Formula 1"
+    ],
+    "goals": [
+      "GRE 목표점수 달성", 
+      "영어 회화 능력 키우기", 
+      "Climate research 연구 성과 도출", 
+      "Macro modeling 체화" , 
+      "자세 교정 및 코어 강화(필라테스, 헬스, 스트레칭)"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "parksj9861@hanyang.ac.kr"
+    },
+    "generation" : 2
+  },
+  {
+    "id": 16,
+    "name": "배경덕",
+    "role": "Investment",
+    "avatar": "image_bae.png",
+    "quote": "변화하는 세상에서 뒤쳐지지 않는 인생 포트폴리오 만들기",
+    "bullets": [
+      "Biotech Investment",
+      "Workout",
+      "Reading"
+    ],
+    "goals": [
+      "미국 바이오텍 투자 경험 쌓기",
+      "투자 스터디 직접 운영하며 규모 키우기",
+      "투자 블로그 이웃수 3000명 달성 목표",
+      "투자 텔레그램을 운영할 수 있을 정도의 기반 다지기",
+      "투자 스터디 참여해 인적 네트워크 넓히기"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "baegyungduck@gmail.com"
+    },
+    "generation" : 2
+  },
+  {
+    "id": 17,
+    "name": "전상우",
+    "role": "Business",
+    "avatar": "image_jeon.png",
+    "quote": "함께 성장하는 환경 속에서 흔들림 없이 제 길을 나아가는 것",
+    "bullets": [
+      "초기 스타트업 운영",
+      "금융 상품 학회",
+      "춤 & 헬스"
+    ],
+    "goals": [
+      "대학원 진학 준비",
+      "스타트업 경영 안정화",
+      "금융 학회 운영"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 2
+  },
+  {
+    "id": 18,
+    "name": "홍석채",
+    "role": "Accounting",
+    "avatar": "image_hong.png",
+    "quote": "선한 영향력을 끼치는 사람이 되는 것",
+    "bullets": [
+      "Incoming UIUC GIES MSA Student (2026.06~)",
+      "USCPA Candidate (FAR, AUD Passed)",
+      "Playing Flute"
+    ],
+    "goals": [
+      "USCPA all sections passed",
+      "CFA Level II pass",
+      "UIUC MSA에서 GPA 3.8+ 유지",
+      "미국 accounting 관련 internship 또는 entry-level job 확보",
+      "Accounting & Finance 분야에서 strong professional network 구축",
+      "꾸준한 study & health routine 형성"
+    ],
+    "links": {
+      "linkedin": "http://www.linkedin.com/in/seokchae-hong-0a57771b0",
+      "email": "seokchae4843@gmail.com"
+    },
+    "generation" : 2
+  },
+  {
+    "id": 19,
+    "name": "김세현",
+    "role": "Business",
+    "avatar": "image_kim_sh.png",
+    "quote": "후회 없이 몰입하며 살아있음을 느끼는 것",
+    "bullets": [
+      "수학 교육 서비스 런칭",
+      "퍼스널 브랜딩",
+      "금융권 인턴십 준비"
+    ],
+    "goals": [
+      "수학 서비스 월매출 100만원 달성",
+      "금융권 인턴 합격",
+      "퍼스널 브랜딩 성공"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": ""
+    },
+    "generation" : 2
+  }
+]

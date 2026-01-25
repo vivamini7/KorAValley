@@ -1,0 +1,560 @@
+/* ===== Page Base ===== */
+.membersPage {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: #e9ecff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
+}
+
+/* 배경 */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 700px at 20% 30%, rgba(90, 80, 255, 0.35), rgba(10, 12, 28, 0) 55%),
+    radial-gradient(900px 600px at 70% 20%, rgba(110, 120, 255, 0.25), rgba(10, 12, 28, 0) 60%),
+    linear-gradient(180deg, #070816 0%, #12143a 0%, #2a2b75 50%, #3a3aa0 100%);
+  z-index: -1;
+}
+
+.glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 35% 70%, rgba(180, 170, 255, 0.18), transparent 55%);
+  filter: blur(30px);
+  z-index: -1;
+}
+
+/* 상단바 */
+.topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.10);
+}
+
+.brandText {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+.nav {
+  display: flex;
+  gap: 34px;
+}
+
+.navItem {
+  color: rgba(220, 225, 255, 0.75);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 8px;
+  transition: 0.2s;
+}
+
+.navItem:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.navItem.active {
+  color: #ffffff;
+}
+
+/* 본문 */
+.wrap {
+  position: relative;
+  z-index: 2;
+  padding: 36px 46px 80px;
+}
+
+/* 타이틀 */
+.pageTitle h1 {
+  margin: 0;
+  font-size: 64px;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+}
+
+.titleUnderline {
+  width: 260px;
+  height: 3px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.9;
+}
+
+/* 섹션 */
+.section {
+  margin-top: 44px;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+
+/* 카드 그리드 */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+@media (max-width: 1100px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .wrap {
+    padding: 26px 18px 70px;
+  }
+  .pageTitle h1 {
+    font-size: 46px;
+  }
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    gap: 18px;
+  }
+}
+
+/* ===== Flip Card (Founding Members) ===== */
+.memberFlipWrap {
+  width: 100%;
+  height: 200px;            /* 카드 높이 고정 */
+  perspective: 1000px;
+  cursor: pointer;
+
+  /* 모바일 터치 UX */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+
+.memberFlipInner {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.memberFlipInner.isFlipped {
+  transform: rotateY(180deg);
+}
+
+.memberFlipFace {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: rgba(14, 26, 56, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* FRONT */
+.memberFront {
+  padding: 22px 22px 18px;
+}
+
+.frontTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.badgeCircle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: rgba(0,0,0,0.12);
+}
+
+.badgeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frontNameRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.frontName {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.frontPill {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(200, 190, 255, 0.75);
+  color: rgba(16, 18, 40, 0.9);
+  font-weight: 900;
+}
+
+.frontQuote {
+  white-space: pre-line;
+  text-align: center;
+  margin: 16px 0 14px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: rgba(240, 242, 255, 0.92);
+}
+
+.frontBullets {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(230, 235, 255, 0.85);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* 소셜 버튼 */
+.frontSocialRow {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 0px;
+}
+
+.frontSocialBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+.frontSocialBtn:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* BACK */
+.memberBack {
+  transform: rotateY(180deg);
+  padding: 0;
+}
+
+.planBox {
+  min-height: 0;
+  height: 100%;
+  padding: 22px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ✅ 스크롤이 필요한 실제 내용 영역 */
+.planScroll {
+  overflow-y: auto;
+  padding-right: 6px;
+  flex: 1;
+
+  min-height: 0;                 /* ✅ 중요: flex 자식이 줄어들 수 있게 */
+  -webkit-overflow-scrolling: touch; /* ✅ 모바일에서 부드러운 스크롤 */
+  overscroll-behavior: contain;  /* ✅ 모바일 바운스/부모 스크롤 전파 줄임 */
+}
+
+
+/* 스크롤바 (크롬/엣지) */
+.planScroll::-webkit-scrollbar {
+  width: 8px;
+}
+.planScroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+}
+.planScroll::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+}
+
+/* Firefox */
+.planScroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.18) rgba(255,255,255,0.06);
+}
+
+
+.planHeading {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: rgba(240, 242, 255, 0.92);
+}
+
+.planBox ul {
+  margin: 0 0 14px 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: rgba(230, 235, 255, 0.86);
+  line-height: 1.6;
+}
+
+/* 오른쪽 아래 뒤집기 버튼 */
+.flipFab {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(92, 255, 205, 0.85);
+  color: rgba(8, 12, 20, 0.95);
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.flipFab:hover {
+  filter: brightness(1.05);
+}
+
+
+
+.cardGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+.badgeCircle{
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+
+  /* ✅ 링 */
+  border: 2px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.12);
+
+  /* ✅ Glow */
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.28),
+    0 0 0 6px rgba(255,255,255,0.06),
+    0 0 22px rgba(160,150,255,0.22);
+
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.memberFlipWrap:hover .badgeCircle{
+  transform: translateY(-2px) scale(1.03);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.34),
+    0 0 0 7px rgba(255,255,255,0.07),
+    0 0 28px rgba(160,150,255,0.30);
+}
+
+.badgeImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.memberFlipWrap{
+  width: 100%;
+  height: 320px;
+  perspective: 1500px;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+
+  transition: transform 200ms ease;
+}
+
+.memberFlipWrap:hover{
+  transform: translateY(-6px);
+}
+
+/* 카드 본체 */
+.memberFlipFace{
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  /* ✅ 사이버 바탕(어두운 유리 + 보라/블루) */
+  background:
+    radial-gradient(900px 420px at 20% 10%, rgba(255,255,255,0.10), transparent 55%),
+    radial-gradient(900px 420px at 85% 25%, rgba(140,120,255,0.22), transparent 55%),
+    linear-gradient(180deg, rgba(10,12,28,0.82), rgba(14,26,56,0.62));
+
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow:
+    0 22px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(10px);
+}
+
+/* ✅ 네온 테두리(항상 살짝) */
+.memberFlipFace::before{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+
+  /* 네온 그라데이션 테두리 */
+  background: linear-gradient(
+    120deg,
+    rgba(125, 110, 255, 0.95),
+    rgba(120, 255, 210, 0.90),
+    rgba(255, 120, 220, 0.85),
+    rgba(125, 110, 255, 0.95)
+  );
+
+  /* 내부는 뚫고 테두리만 보이게 */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0.50;
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+
+/* ✅ 네온 글로우(바깥 발광) */
+.memberFlipFace::after{
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 26px;
+
+  background: radial-gradient(circle at 30% 20%, rgba(125,110,255,0.35), transparent 55%),
+              radial-gradient(circle at 80% 35%, rgba(120,255,210,0.22), transparent 55%),
+              radial-gradient(circle at 70% 90%, rgba(255,120,220,0.18), transparent 60%);
+  filter: blur(18px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ✅ hover 시 발광 더 강하게 */
+.memberFlipWrap:hover .memberFlipFace::before{
+  opacity: 0.95;
+}
+
+.memberFlipWrap:hover .memberFlipFace::after{
+  opacity: 0.90;
+  filter: blur(22px);
+}
+.frontPill{
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: 1000;
+  letter-spacing: 0.03em;
+
+  color: rgba(10,12,28,0.95);
+
+  /* ✅ 네온 그라데이션 */
+  background: linear-gradient(
+    90deg,
+    rgba(103, 94, 187, 0.95),
+  );
+
+  border: 1px solid rgba(255,255,255,0.16);
+
+  /* ✅ 진짜 강조: 발광 + 살짝 떠보이게 */
+  box-shadow:
+    0 14px 26px rgba(0,0,0,0.30),
+    0 0 18px rgba(120,255,210,0.35),
+    0 0 18px rgba(125,110,255,0.35),
+    0 0 14px rgba(255,120,220,0.28);
+
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  transform: translateZ(0); /* 렌더링 깨짐 방지용 */
+}
+
+/* hover 때 pill도 더 “쨍” */
+.memberFlipWrap:hover .frontPill{
+  filter: brightness(1.06);
+  box-shadow:
+    0 16px 30px rgba(0,0,0,0.34),
+    0 0 22px rgba(255, 255, 255, 0.5),
+    0 0 22px rgba(42, 42, 45, 0.5),
+    0 0 18px rgba(255,120,220,0.38);
+}
+
+
+.memberTabs{
+  display:flex;
+  gap:7px;
+  margin: 3px 0 10px;
+  flex-wrap: wrap;
+}
+
+.tabBtn{
+  padding: 1px 1px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(171, 185, 243, 0.874);
+  color: rgba(240,245,255,0.92);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.tabBtn:hover{
+  border-color: rgba(255,255,255,0.28);
+}
+
+.tabBtn.active{
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(114, 136, 218, 0.787);
+}

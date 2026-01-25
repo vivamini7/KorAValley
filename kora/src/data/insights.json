@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "author": "천승범",
+    "content": "요즘 떠도는 일론 머스크의 30가지 발언 혹시 풀영상으로 보고 싶으신 분은 영상으로 보는 것도 추천합니다.\n\nhttps://youtu.be/_dPiFfDVCAg?si=TTVmjRAr3ar7kKcp\n\n30가지 발언만 보고 싶다면 인스타에서도 볼 수 있어요!\nhttps://www.instagram.com/p/DTSjdjiEgTc/",
+    "tags": ["AI", "일론머스크"]
+  },
+  {
+    "id": 2,
+    "author": "조예찬",
+    "content": "최근 읽은 논문 중에서 LLM 평가 방식에 대해 다시 생각해보게 만든 글.\n정량 지표보다 사용 맥락이 더 중요하다는 점이 인상 깊었다.",
+    "tags": ["LLM", "Research"]
+  }
+]
