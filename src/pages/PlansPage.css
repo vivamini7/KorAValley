@@ -226,13 +226,13 @@
 
 .statsCardTitle{
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 800;
   color: rgba(255,255,255,0.95);
   font-style: italic;
 }
 
-.statsCard.wide{ min-height: 200px; }
-.statsCard.tall{ min-height: 200px; }
+.statsCard.wide{ min-height: 150px; }
+.statsCard.tall{ min-height: 150px; }
 
 /* 차트 컨테이너 높이 */
 .donutWrap{
@@ -264,11 +264,11 @@
 /* focusing area */
 /* focusing area (✅ 제목 아래 막대 + 최대값 기준 표시용) */
 .focusList{
-  margin-top: 10px;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 0px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .focusItem{
