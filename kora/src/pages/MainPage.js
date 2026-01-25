@@ -69,14 +69,11 @@ export default function MainPage() {
       {/* Hero */}
       <main className="hero">
         <h1 className="title">
-          아기맹수
-          <br />
-          welcome
+          KorA Valley
         </h1>
 
         <p className="subtitle">
-          조예찬씨 배고파요.
-          
+          Professional Minds, Colorful Lives.
         </p>
       </main>
     </div>

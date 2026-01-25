@@ -1,29 +1,27 @@
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import MainPage from "./pages/MainPage";
 import MembersPage from "./pages/MembersPage";
 import PlansPage from "./pages/PlansPage";
 import InsightsPage from "./pages/InsightsPage";
-import SplashScreen from "./pages/SplashScreen"; // 추가
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
-
   return (
-    <>
-      {showSplash ? (
-        <SplashScreen onFinish={() => setShowSplash(false)} />
-      ) : (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/members" element={<MembersPage />} />
-            <Route path="/plans" element={<PlansPage />} />
-            <Route path="/insights" element={<InsightsPage />} />
-          </Routes>
-        </BrowserRouter>
-      )}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+
+        {/* gen 파라미터 없으면 founding으로 */}
+        <Route path="/members" element={<Navigate to="/members/all" replace />} />
+        <Route path="/members/:gen" element={<MembersPage />} />
+
+        <Route path="/plans" element={<PlansPage />} />
+        <Route path="/insights" element={<InsightsPage />} />
+
+        {/* 나머지 */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

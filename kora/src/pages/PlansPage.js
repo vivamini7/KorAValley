@@ -4,8 +4,8 @@ import "./PlansPage.css";
 import logo from "../images/logo.png";
 
 import image15 from "../images/image15.png";
-import image16 from "../images/image16.png";
-import image17 from "../images/image17.png";
+import cheo from "../images/cheo.png";
+import zo from "../images/zo.png";
 
 import {
   ResponsiveContainer,
@@ -26,8 +26,8 @@ import {
 
 const avatarMap = {
   "image15.png": image15,
-  "image16.png": image16,
-  "image17.png": image17,
+  "cheo.png": cheo,
+  "zo.png": zo,
 };
 
 const planData = {
@@ -36,7 +36,7 @@ const planData = {
       {
         name: "조예찬",
         role: "Medical AI",
-        avatarKey: "image15.png",
+        avatarKey: "zo.png",
         socials: { linkedin: "#", medium: "#", instagram: "#" },
         stats: {
           progressPercent: 67,
@@ -59,7 +59,7 @@ const planData = {
       {
         name: "천승범",
         role: "Developer",
-        avatarKey: "image16.png",
+        avatarKey: "cheo.png",
         socials: { linkedin: "#", medium: "#", instagram: "#" },
         stats: {
           progressPercent: 52,
@@ -80,7 +80,7 @@ const planData = {
   "1기": {
     members: [
       {
-        name: "홍길동",
+        name: "윤상민",
         role: "Member",
         avatarKey: "image17.png",
         socials: { linkedin: "", medium: "", instagram: "" },
