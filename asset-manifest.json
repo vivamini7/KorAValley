@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/KorAValley/static/css/main.0892f770.css",
-    "main.js": "/KorAValley/static/js/main.a87a4715.js",
+    "main.js": "/KorAValley/static/js/main.f208f37f.js",
     "static/js/453.3f684051.chunk.js": "/KorAValley/static/js/453.3f684051.chunk.js",
+    "static/media/image_shin_jw.png": "/KorAValley/static/media/image_shin_jw.07618c60cc52e255e291.png",
+    "static/media/image_kim_sh.png": "/KorAValley/static/media/image_kim_sh.28080aaf40be6141185e.png",
     "static/media/image_hwang.png": "/KorAValley/static/media/image_hwang.aabdf76515f8002cb713.png",
     "static/media/image_jeon.png": "/KorAValley/static/media/image_jeon.0ec69a6c2f0b6f94c763.png",
     "static/media/image_park.png": "/KorAValley/static/media/image_park.3575b598dbdd50020075.png",
@@ -26,11 +28,11 @@
     "static/media/image17.png": "/KorAValley/static/media/image17.426b2bab107d8f0c34bf.png",
     "index.html": "/KorAValley/index.html",
     "main.0892f770.css.map": "/KorAValley/static/css/main.0892f770.css.map",
-    "main.a87a4715.js.map": "/KorAValley/static/js/main.a87a4715.js.map",
+    "main.f208f37f.js.map": "/KorAValley/static/js/main.f208f37f.js.map",
     "453.3f684051.chunk.js.map": "/KorAValley/static/js/453.3f684051.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0892f770.css",
-    "static/js/main.a87a4715.js"
+    "static/js/main.f208f37f.js"
   ]
 }
