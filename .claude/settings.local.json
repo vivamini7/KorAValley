@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx react-scripts:*)",
+      "Bash(curl -L \"https://docs.google.com/spreadsheets/d/1p9fdt-DSnh9bz98OrX6gyEMsPjE4XzpIfqSw90NYAVw/export?format=csv&gid=1788042251\")"
+    ]
+  }
+}

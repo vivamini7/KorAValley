@@ -1,12 +1,13 @@
 import React, { useMemo, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import "./InsightsPage.css";
+import Navbar from "../components/Navbar";
 import postitImg from "../images/postit.png";
 
 import insightsData from "../data/insights.json";
 import infoData from "../data/info.json";
 import eventsData from "../data/events.json";
-import logo from "../images/logo.png";
+
+const UNLOCK_PASSWORD = process.env.REACT_APP_UNLOCK_PASSWORD ?? "";
 
 const DATA_MAP = {
   Insights: insightsData,
@@ -41,10 +42,44 @@ function renderWithLinks(text) {
   });
 }
 
-export default function InsightsPage() {
-  const { pathname } = useLocation();
-  const navClass = (path) => `navItem ${pathname === path ? "active" : ""}`;
+function PasswordModal({ onSuccess }) {
+  const [pw, setPw] = useState("");
+  const [error, setError] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (pw === UNLOCK_PASSWORD) {
+      onSuccess();
+    } else {
+      setError(true);
+      setPw("");
+    }
+  };
+
+  return (
+    <div className="pwModalOverlay">
+      <div className="pwModal" onClick={(e) => e.stopPropagation()}>
+        <div className="pwModalTitle">Members Only</div>
+        <div className="pwModalDesc">이 페이지는 회원에게만 공개됩니다.</div>
+        <form onSubmit={handleSubmit} className="pwModalForm">
+          <input
+            type="password"
+            className={`pwModalInput${error ? " error" : ""}`}
+            placeholder="비밀번호 입력"
+            value={pw}
+            onChange={(e) => { setPw(e.target.value); setError(false); }}
+            autoFocus
+          />
+          {error && <div className="pwModalError">비밀번호가 틀렸습니다.</div>}
+          <button type="submit" className="pwModalBtn">확인</button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default function InsightsPage() {
+  const [unlocked, setUnlocked] = useState(false);
   const [activeTab, setActiveTab] = useState("Insights");
   const [query, setQuery] = useState("");
   const [selectedNote, setSelectedNote] = useState(null);
@@ -80,26 +115,23 @@ export default function InsightsPage() {
   };
   const closeNote = () => setSelectedNote(null);
 
+  if (!unlocked) {
+    return (
+      <div className="insightsPage">
+        <div className="bg" />
+        <div className="glow" />
+        <Navbar />
+        <PasswordModal onSuccess={() => setUnlocked(true)} />
+      </div>
+    );
+  }
+
   return (
     <div className="insightsPage">
       <div className="bg" />
       <div className="glow" />
 
-      {/* =========================
-         Topbar
-         ========================= */}
-      <header className="topbar">
-        <div className="brand">
-          <img src={logo} alt="YOUR APP logo" className="logoImg" />
-        </div>
-
-        <nav className="nav">
-          <Link className={navClass("/")} to="/">Main</Link>
-          <Link className={navClass("/members")} to="/members">Members</Link>
-          <Link className={navClass("/plans")} to="/plans">Plans</Link>
-          <Link className={navClass("/insights")} to="/insights">Insights</Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="wrap">
         {/* =========================
@@ -156,9 +188,11 @@ export default function InsightsPage() {
                 {/* ✅ 이미지 위 텍스트 */}
                 <div className="noteContent">
                   <div className="noteText">
-                    {n.content.length > 90
-                      ? renderWithLinks(n.content.slice(0, 90) + "...")
-                      : renderWithLinks(n.content)}
+                    {renderWithLinks(
+                      n.content.length > 160
+                        ? n.content.slice(0, 160) + "..."
+                        : n.content
+                    )}
                   </div>
 
                   {n.author && (

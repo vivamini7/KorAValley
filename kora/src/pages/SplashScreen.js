@@ -20,16 +20,20 @@ export default function SplashScreen({ onFinish }) {
     // 2. 3.5초 뒤 메인 페이지로 이동 (애니메이션 시간보다 조금 길게)
     const timer = setTimeout(() => {
       onFinish();
-    }, 3500);
+    }, 2700);
 
     return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
     <div className="splash-container" ref={containerRef}>
+      <div className="splash-glow" />
+      <div className="splash-light-sweep" />
+
       <div className="logo-wrapper">
         <Logo className="drawing-logo" />
       </div>
     </div>
   );
+
 }
