@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KorAValley/static/css/main.8ca97735.css",
-    "main.js": "/KorAValley/static/js/main.cf2fd29a.js",
+    "main.js": "/KorAValley/static/js/main.535d703c.js",
     "static/js/453.3f684051.chunk.js": "/KorAValley/static/js/453.3f684051.chunk.js",
     "static/media/seo_j.png": "/KorAValley/static/media/seo_j.07c72a1bdad32d9e11bc.png",
     "static/media/image_seo.png": "/KorAValley/static/media/image_seo.1040abd13d0a07e54c36.png",
@@ -31,11 +31,11 @@
     "static/media/image15.png": "/KorAValley/static/media/image15.fc925bfe84da84ef4f2b.png",
     "index.html": "/KorAValley/index.html",
     "main.8ca97735.css.map": "/KorAValley/static/css/main.8ca97735.css.map",
-    "main.cf2fd29a.js.map": "/KorAValley/static/js/main.cf2fd29a.js.map",
+    "main.535d703c.js.map": "/KorAValley/static/js/main.535d703c.js.map",
     "453.3f684051.chunk.js.map": "/KorAValley/static/js/453.3f684051.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8ca97735.css",
-    "static/js/main.cf2fd29a.js"
+    "static/js/main.535d703c.js"
   ]
 }
