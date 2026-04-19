@@ -1,11 +1,13 @@
 {
   "files": {
     "main.css": "/KorAValley/static/css/main.ca74ec28.css",
-    "main.js": "/KorAValley/static/js/main.2d523ffd.js",
+    "main.js": "/KorAValley/static/js/main.6b8ee832.js",
     "static/js/453.3f684051.chunk.js": "/KorAValley/static/js/453.3f684051.chunk.js",
     "static/media/seo_j.png": "/KorAValley/static/media/seo_j.07c72a1bdad32d9e11bc.png",
+    "static/media/han_ja.png": "/KorAValley/static/media/han_ja.cb20af2216990b2912a9.png",
     "static/media/image_seo.png": "/KorAValley/static/media/image_seo.1040abd13d0a07e54c36.png",
     "static/media/image_shin_jw.png": "/KorAValley/static/media/image_shin_jw.07618c60cc52e255e291.png",
+    "static/media/kim_jw.png": "/KorAValley/static/media/kim_jw.4a21528ecd19603df704.png",
     "static/media/image_choi_sy.png": "/KorAValley/static/media/image_choi_sy.7bfb145266003e3f956a.png",
     "static/media/jung_jw.png": "/KorAValley/static/media/jung_jw.76ef4b9f95b34c21d3b3.png",
     "static/media/image_kim_yj.png": "/KorAValley/static/media/image_kim_yj.75021fd8e67a76f33e01.png",
@@ -31,11 +33,11 @@
     "static/media/image15.png": "/KorAValley/static/media/image15.fc925bfe84da84ef4f2b.png",
     "index.html": "/KorAValley/index.html",
     "main.ca74ec28.css.map": "/KorAValley/static/css/main.ca74ec28.css.map",
-    "main.2d523ffd.js.map": "/KorAValley/static/js/main.2d523ffd.js.map",
+    "main.6b8ee832.js.map": "/KorAValley/static/js/main.6b8ee832.js.map",
     "453.3f684051.chunk.js.map": "/KorAValley/static/js/453.3f684051.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca74ec28.css",
-    "static/js/main.2d523ffd.js"
+    "static/js/main.6b8ee832.js"
   ]
 }
