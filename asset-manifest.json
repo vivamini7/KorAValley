@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d0cd0161.css",
-    "main.js": "/static/js/main.26f7e9d5.js",
+    "main.js": "/static/js/main.40d52f57.js",
     "static/js/453.3f684051.chunk.js": "/static/js/453.3f684051.chunk.js",
     "static/media/seo_j.png": "/static/media/seo_j.07c72a1bdad32d9e11bc.png",
     "static/media/lee_tk.png": "/static/media/lee_tk.11fc89343b4365117694.png",
@@ -22,6 +22,7 @@
     "static/media/image_bae.png": "/static/media/image_bae.1d8bb19fb1d2288da883.png",
     "static/media/jung_sm.png": "/static/media/jung_sm.5c5f8415be5e55b8677e.png",
     "static/media/image_hong.png": "/static/media/image_hong.fd992945a2259a75fadf.png",
+    "static/media/seong_hj.png": "/static/media/seong_hj.1f937a7184a8319d469f.png",
     "static/media/lee_sy.png": "/static/media/lee_sy.820952ba270d0105b82e.png",
     "static/media/kim_mj.png": "/static/media/kim_mj.2b1ce4978e52e196bc04.png",
     "static/media/image_kim_jh.png": "/static/media/image_kim_jh.c6f37ae557a3bfc80c1b.png",
@@ -37,11 +38,11 @@
     "static/media/image15.png": "/static/media/image15.fc925bfe84da84ef4f2b.png",
     "index.html": "/index.html",
     "main.d0cd0161.css.map": "/static/css/main.d0cd0161.css.map",
-    "main.26f7e9d5.js.map": "/static/js/main.26f7e9d5.js.map",
+    "main.40d52f57.js.map": "/static/js/main.40d52f57.js.map",
     "453.3f684051.chunk.js.map": "/static/js/453.3f684051.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0cd0161.css",
-    "static/js/main.26f7e9d5.js"
+    "static/js/main.40d52f57.js"
   ]
 }
