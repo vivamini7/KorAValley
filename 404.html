@@ -6,7 +6,7 @@
   <script>
     var path = window.location.pathname + window.location.search + window.location.hash;
     sessionStorage.setItem('spa-redirect', path);
-    window.location.replace(window.location.origin + '/');
+    window.location.replace(window.location.origin + '/?r=' + encodeURIComponent(path));
   </script>
 </head>
 <body></body>
