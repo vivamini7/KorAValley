@@ -15,7 +15,7 @@ const messaging = firebase.messaging();
 
 // 사이트가 닫혀 있거나 백그라운드일 때 푸시를 받아 알림으로 표시
 messaging.onBackgroundMessage((payload) => {
-  const { title, body } = payload.notification || {};
+  const { title, body } = payload.data || {};
   self.registration.showNotification(title || "코라밸리", {
     body: body || "",
     icon: "/favicon-192-src.png",
