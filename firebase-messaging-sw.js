@@ -11,6 +11,11 @@ firebase.initializeApp({
   appId: "1:421492258308:web:2605dec18ffbf8cac36751",
 });
 
+// 새 SW가 배포되면 기존 탭에서도 즉시 교체되도록 한다 (구버전 SW가 계속 떠 있어
+// payload 형식이 안 맞는 빈 알림을 띄우는 문제 방지)
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", (event) => event.waitUntil(self.clients.claim()));
+
 const messaging = firebase.messaging();
 
 // 사이트가 닫혀 있거나 백그라운드일 때 푸시를 받아 알림으로 표시
