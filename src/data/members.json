@@ -50,31 +50,6 @@
     "group": "founding"
   },
   {
-    "id": 5,
-    "name": "윤상민",
-    "role": "Data-intelligent with Agent",
-    "avatar": "yoon.png",
-    "quote": "모두가 공평한 기회를 누릴 수 있는 사회",
-    "bullets": [
-      "DIL+AI Researcher",
-      "Author & Reader",
-      "Social Entrepreneur"
-    ],
-    "goals": [
-      "DIL+AI Researcher 연구실 진학",
-      "개인 단편 소설 출간 & 대회 수상",
-      "주식 분야별 공부, follow-up & 수익률 목표 달성",
-      "영어 시험 3개 고득점 마무리",
-      "2026ver 하루 루틴 - 오전 6시 기상, 7-9 경제공부, 19~ 운동, 독서, 영어공부",
-      "비영리 사업 계획 -> start-up"
-    ],
-    "links": {
-      "linkedin": "",
-      "email": "juneekeyun@gmail.com"
-    },
-    "generation" : 0
-  },
-  {
     "id": 3,
     "name": "신재욱",
     "role": "Physical AI - Med",

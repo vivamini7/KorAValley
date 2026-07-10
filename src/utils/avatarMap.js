@@ -1,5 +1,4 @@
 import image15     from "../images/image15.png";
-import yoon        from "../images/yoon.png";
 import zo          from "../images/zo.png";
 import cheo        from "../images/cheo.png";
 import hong        from "../images/image_hong.png";
@@ -33,7 +32,6 @@ import planData    from "../data/planData.json";
 
 export const avatarMap = {
   "image15.png":       image15,
-  "yoon.png":          yoon,
   "zo.png":            zo,
   "cheo.png":          cheo,
   "image_hong.png":    hong,

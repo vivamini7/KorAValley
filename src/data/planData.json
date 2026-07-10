@@ -7,7 +7,6 @@
   },
   "0기": {
     "members": [
-      { "name": "윤상민", "role": "Data-intelligent",           "avatarKey": "yoon.png",         "socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
       { "name": "신재욱", "role": "Physical AI - Med","avatarKey": "image_shin_jw.png","socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
       { "name": "서희찬", "role": "AI Fairness",      "avatarKey": "image_seo.png",    "socials": { "linkedin": "https://www.linkedin.com/in/huichan-seo-443173265/",         "medium": "", "instagram": "" } }
     ]
