@@ -1,0 +1,16 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for kora-valley plan notifications",
+  "private": true,
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.4.0"
+  }
+}

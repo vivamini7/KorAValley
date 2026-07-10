@@ -1,0 +1,216 @@
+.adminPage {
+  min-height: 100vh;
+  background: #080c1a;
+  color: #fff;
+  font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+.adminWrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.adminTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 36px;
+}
+
+/* ── 섹션 ── */
+.adminSection {
+  margin-bottom: 48px;
+}
+
+.adminSectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.adminSectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+
+.adminBadge {
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: rgba(255,180,0,0.15);
+  border: 1px solid rgba(255,180,0,0.3);
+  color: rgba(255,190,50,0.9);
+  font-size: 12px;
+  font-weight: 700;
+}
+.adminBadgeGreen {
+  background: rgba(52,211,153,0.12);
+  border-color: rgba(52,211,153,0.3);
+  color: rgba(52,211,153,0.9);
+}
+
+/* ── 승인 대기 카드 ── */
+.adminCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adminCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.adminCardEmail {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.adminCardDate {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+
+.adminCardSuggested {
+  font-size: 13px;
+  color: rgba(100,210,245,0.8);
+  background: rgba(100,210,245,0.08);
+  border: 1px solid rgba(100,210,245,0.2);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+.adminCardSuggested strong {
+  color: rgba(100,210,245,1);
+}
+
+.adminCardRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.adminSelect {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  padding: 9px 12px;
+  outline: none;
+  cursor: pointer;
+}
+.adminSelect option { background: #0d1b2a; color: #fff; }
+
+.adminApproveBtn {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(52,211,153,0.85), rgba(16,185,129,0.85));
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.adminApproveBtn:hover:not(:disabled) { opacity: 0.85; }
+.adminApproveBtn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.adminCardPreview {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  padding-left: 2px;
+}
+
+/* ── 승인 완료 목록 ── */
+.adminApprovedList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.adminApprovedRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  gap: 12px;
+}
+
+.adminApprovedInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.adminApprovedName {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+}
+
+.adminApprovedEmail {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+
+.adminApprovedActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.adminNetworkingBtn {
+  padding: 6px 14px;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 7px;
+  background: transparent;
+  color: rgba(167, 139, 250, 0.6);
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.adminNetworkingBtn:hover:not(:disabled) {
+  background: rgba(167, 139, 250, 0.1);
+}
+.adminNetworkingBtn.active {
+  background: rgba(167, 139, 250, 0.15);
+  border-color: rgba(167, 139, 250, 0.5);
+  color: rgba(167, 139, 250, 0.95);
+}
+.adminNetworkingBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.adminRevokeBtn {
+  padding: 6px 14px;
+  border: 1px solid rgba(255,80,80,0.25);
+  border-radius: 7px;
+  background: transparent;
+  color: rgba(255,100,100,0.6);
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.adminRevokeBtn:hover:not(:disabled) { background: rgba(255,80,80,0.1); }
+.adminRevokeBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.adminEmpty {
+  color: rgba(255,255,255,0.25);
+  font-size: 14px;
+  padding: 20px 0;
+}

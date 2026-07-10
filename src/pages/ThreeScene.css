@@ -1,0 +1,17 @@
+.threeScene {
+  width: 100%;
+  height: 420px;
+  cursor: grab;
+}
+
+.threeScene:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 900px) {
+  .threeScene { height: 320px; }
+}
+
+@media (max-width: 600px) {
+  .threeScene { height: 260px; }
+}

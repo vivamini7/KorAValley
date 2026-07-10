@@ -1,0 +1,51 @@
+{
+  "Founding": {
+    "members": [
+      { "name": "천승범", "role": "Develop",         "avatarKey": "cheo.png",         "socials": { "linkedin": "https://www.linkedin.com/in/0921sean/",                      "medium": "", "instagram": "" } },
+      { "name": "조예찬", "role": "Medical AI",       "avatarKey": "zo.png",           "socials": { "linkedin": "https://www.linkedin.com/in/ivchxn/",                        "medium": "", "instagram": "" } }
+    ]
+  },
+  "0기": {
+    "members": [
+      { "name": "윤상민", "role": "Data-intelligent",           "avatarKey": "yoon.png",         "socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
+      { "name": "신재욱", "role": "Physical AI - Med","avatarKey": "image_shin_jw.png","socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
+      { "name": "서희찬", "role": "AI Fairness",      "avatarKey": "image_seo.png",    "socials": { "linkedin": "https://www.linkedin.com/in/huichan-seo-443173265/",         "medium": "", "instagram": "" } }
+    ]
+  },
+  "1기": {
+    "members": [
+      { "name": "김영준", "role": "Economics",        "avatarKey": "image_kim_yj.png", "socials": { "linkedin": "http://www.linkedin.com/in/young-june-kim-90b4b51a6",        "medium": "", "instagram": "" } },
+      { "name": "정성민", "role": "Robotics, CV",     "avatarKey": "image_jung.png",   "socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
+      { "name": "이연희", "role": "Drug Discovery",   "avatarKey": "image_lee_yh.png", "socials": { "linkedin": "https://www.linkedin.com/in/kirsten-lee-270482309",          "medium": "", "instagram": "" } },
+      { "name": "최서연", "role": "Business",         "avatarKey": "image_choi_sy.png","socials": { "linkedin": "https://www.linkedin.com/in/seoynerinchoi",                  "medium": "", "instagram": "" } },
+      { "name": "김진호", "role": "Neuroscience + AI","avatarKey": "image_kim_jh.png", "socials": { "linkedin": "https://www.linkedin.com/in/jinho-kim-dku",                  "medium": "", "instagram": "" } }
+    ]
+  },
+  "2기": {
+    "members": [
+      { "name": "황서호", "role": "Product Engineering","avatarKey": "image_hwang.png","socials": { "linkedin": "https://www.linkedin.com/in/seoho-hwang",                   "medium": "", "instagram": "" } },
+      { "name": "유재호", "role": "iOS Engineer",     "avatarKey": "image_yu.png",     "socials": { "linkedin": "https://www.linkedin.com/in/jageryoo/",                      "medium": "", "instagram": "" } },
+      { "name": "박상준", "role": "Climate Ma-economics","avatarKey": "image_park.png","socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
+      { "name": "배경덕", "role": "Investment",       "avatarKey": "image_bae.png",    "socials": { "linkedin": "",                                                           "medium": "", "instagram": "" } },
+      { "name": "전상우", "role": "Finance, AI",      "avatarKey": "image_jeon.png",   "socials": { "linkedin": "https://www.linkedin.com/in/sangwoochon",                    "medium": "", "instagram": "" } },
+      { "name": "홍석채", "role": "Accounting",       "avatarKey": "image_hong.png",   "socials": { "linkedin": "http://www.linkedin.com/in/seokchae-hong-0a57771b0",         "medium": "", "instagram": "" } },
+      { "name": "김세현", "role": "Finance, Math Guide","avatarKey": "image_kim_sh.png","socials": { "linkedin": "",                                                          "medium": "", "instagram": "" } },
+      { "name": "서정원", "role": "Medical AI",         "avatarKey": "seo_j.png",        "socials": { "linkedin": "https://www.linkedin.com/in/jjeongwon",                     "medium": "", "instagram": "" } },
+      { "name": "김예진", "role": "Medical AI",         "avatarKey": "kim_ye.png",       "socials": { "linkedin": "",                                                          "medium": "", "instagram": "" } }
+    ]
+  },
+  "3기": {
+    "members": [
+      { "name": "정지원", "role": "Accessibility Tech",         "avatarKey": "jung_jw.png", "socials": { "linkedin": "https://www.linkedin.com/in/codejiwon",                      "medium": "", "instagram": "" } },
+      { "name": "김예나", "role": "Pharmaceutical Sciences, AI","avatarKey": "kim_yn.png",  "socials": { "linkedin": "https://www.linkedin.com/in/yenakim123",                     "medium": "", "instagram": "" } },
+      { "name": "한주아", "role": "Physical AI",                 "avatarKey": "han_ja.png",  "socials": { "linkedin": "http://www.linkedin.com/in/jua-han-903a05280",               "medium": "", "instagram": "" } },
+      { "name": "김지우", "role": "Product Builder",             "avatarKey": "kim_jw.png",  "socials": { "linkedin": "https://www.linkedin.com/in/jiwookm/",                        "medium": "", "instagram": "" } },
+      { "name": "문재혁", "role": "Power Engineering",           "avatarKey": "moon_jh.png", "socials": { "linkedin": "https://www.linkedin.com/in/jaehyuk-moon-736225231/?locale=ko", "medium": "", "instagram": "" } },
+      { "name": "정수민", "role": "Medical AI",                  "avatarKey": "jung_sm.png", "socials": { "linkedin": "https://www.linkedin.com/in/soominchung9910/",                   "medium": "", "instagram": "" } },
+      { "name": "설예원", "role": "Medical AI",                  "avatarKey": "seol_yw.png", "socials": { "linkedin": "",                                                               "medium": "", "instagram": "" } },
+      { "name": "김명주", "role": "Climate with AI",             "avatarKey": "kim_mj.png",  "socials": { "linkedin": "https://www.linkedin.com/in/myeongju-adeline-kim-5b27b7218/",    "medium": "", "instagram": "" } },
+      { "name": "이태경", "role": "Intl Studies, AI",            "avatarKey": "lee_tk.png",  "socials": { "linkedin": "https://www.linkedin.com/in/taekyungleee",                        "medium": "", "instagram": "" } },
+      { "name": "성현중", "role": "Physical AI, MedDevice",       "avatarKey": "seong_hj.png","socials": { "linkedin": "https://www.linkedin.com/in/hyeonjung-seong-092620366",            "medium": "", "instagram": "" } }
+    ]
+  }
+}

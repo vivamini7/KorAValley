@@ -1,95 +1,139 @@
-/* ========== Layout ========== */
+/* =========================
+   Base / Layout
+   ========================= */
+:root {
+  --topbar-h: 70px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .mainpage {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
   color: #fff;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
 }
 
-/* ========== Space Background (UPDATED) ========== */
+/* (선택) body 기본 margin 때문에 1~2px 스크롤 생기면 이거 전역에 넣기:
+body { margin: 0; }
+*/
+
+/* =========================
+   Background (Base)
+   ========================= */
 .bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(1100px 680px at 52% 32%, rgba(120, 150, 255, 0.18), rgba(10, 10, 24, 0.92) 2%),
-    radial-gradient(820px 560px at 18% 72%, rgba(210, 140, 255, 0.16), transparent 60%),
-    radial-gradient(760px 520px at 84% 78%, rgba(110, 220, 255, 0.12), transparent 58%),
-    radial-gradient(620px 480px at 72% 18%, rgba(255, 140, 200, 0.09), transparent 60%),
-    linear-gradient(180deg, #070a1c 0%, #03040a 30%);
+    radial-gradient(1200px 760px at 55% 35%, rgba(40, 120, 220, 0.20), transparent 60%),
+    radial-gradient(900px 640px at 25% 70%, rgba(30, 180, 200, 0.16), transparent 65%),
+    linear-gradient(180deg, #060d18 0%, #071525 55%, #060d18 100%);
 }
 
-/* ========== Flowing Lights ========== */
+/* =========================
+   Flowing Lights
+   ========================= */
 .glow {
-  position: absolute;
-  inset: -45%;
+  position: fixed;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
 }
 
-.glow::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(700px 600px at 30% 40%, rgba(150, 180, 255, 0.38), transparent 65%),
-    radial-gradient(820px 680px at 70% 65%, rgba(230, 170, 255, 0.32), transparent 68%);
-  animation: lightFlowMain 42s ease-in-out infinite;
-}
-
+.glow::before,
 .glow::after {
   content: "";
   position: absolute;
   inset: 0;
+  mix-blend-mode: normal;
+}
+
+.glow::before {
   background:
-    radial-gradient(520px 460px at 20% 70%, rgba(160, 230, 255, 0.24), transparent 62%),
-    radial-gradient(600px 520px at 80% 25%, rgba(255, 170, 220, 0.22), transparent 64%);
+    radial-gradient(700px 600px at 30% 40%, rgba(50, 150, 240, 0.30), transparent 65%),
+    radial-gradient(820px 680px at 70% 65%, rgba(40, 200, 220, 0.24), transparent 68%);
+  animation: lightFlowMain 42s ease-in-out infinite;
+}
+
+.glow::after {
+  background:
+    radial-gradient(520px 460px at 20% 70%, rgba(60, 180, 230, 0.20), transparent 62%),
+    radial-gradient(600px 520px at 80% 25%, rgba(30, 160, 210, 0.18), transparent 64%);
   mix-blend-mode: screen;
   animation: lightFlowSub 28s ease-in-out infinite alternate;
 }
 
+/* 없으면 간단 버전이라도 넣어두자 */
 @keyframes lightFlowMain {
-  0%   { transform: translate(-6%, -4%) scale(1);    opacity: 0.75; }
-  20%  { transform: translate( 4%, -6%) scale(1.12); opacity: 0.95; }
-  45%  { transform: translate( 8%,  3%) scale(1.22); opacity: 1;    }
-  70%  { transform: translate(-2%,  6%) scale(1.15); opacity: 0.9;  }
-  100% { transform: translate(-6%, -4%) scale(1);    opacity: 0.75; }
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.9; }
+  50%  { transform: translate(3%, -2%) scale(1.05); opacity: 1; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
 }
 
 @keyframes lightFlowSub {
-  0%   { transform: translate( 3%,  2%) scale(1);    opacity: 0.6;  }
-  35%  { transform: translate(-5%,  4%) scale(1.18); opacity: 0.85; }
-  65%  { transform: translate( 6%, -3%) scale(1.25); opacity: 0.95; }
-  100% { transform: translate( 3%,  2%) scale(1);    opacity: 0.6;  }
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.85; }
+  50%  { transform: translate(-2%, 2%) scale(1.04); opacity: 1; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.85; }
 }
 
-/* ========== Stars ========== */
+/* =========================
+   Stars + Vignette
+   ========================= */
 .mainpage::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
+
   background:
-    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.42) 1.9px, transparent 4px),
-    radial-gradient(circle at 78% 22%, rgba(255,255,255,0.36) 1.7px, transparent 4px),
-    radial-gradient(circle at 64% 68%, rgba(255,255,255,0.40) 2.4px, transparent 5px),
-    radial-gradient(circle at 32% 74%, rgba(255,255,255,0.34) 2.0px, transparent 4.5px),
-    radial-gradient(circle at 90% 55%, rgba(255,255,255,0.28) 1.8px, transparent 4px),
-    radial-gradient(circle at 8% 62%,  rgba(255,255,255,0.26) 1.6px, transparent 3.8px),
-    radial-gradient(circle at 22% 46%, rgba(255,255,255,0.22) 1.2px, transparent 3px),
-    radial-gradient(circle at 55% 30%, rgba(255,255,255,0.18) 1.1px, transparent 2.8px),
-    radial-gradient(circle at 82% 54%, rgba(255,255,255,0.20) 1.3px, transparent 3px),
-    radial-gradient(circle at 44% 16%, rgba(255,255,255,0.16) 1.0px, transparent 2.6px),
-    radial-gradient(circle at 60% 86%, rgba(255,255,255,0.14) 0.9px, transparent 2.4px),
-    radial-gradient(circle at 15% 35%, rgba(255,255,255,0.08) 0.8px, transparent 2.2px),
-    radial-gradient(circle at 35% 55%, rgba(255,255,255,0.06) 0.7px, transparent 2.1px),
-    radial-gradient(circle at 70% 45%, rgba(255,255,255,0.06) 0.7px, transparent 2.1px),
-    radial-gradient(circle at 88% 28%, rgba(255,255,255,0.05) 0.6px, transparent 2px);
-  opacity: 0.65;
-  animation: starBreath 24s ease-in-out infinite;
+    /* ✦ 큰 별 (아주 드물게) */
+    radial-gradient(circle, rgba(255,255,255,0.55) 1.4px, transparent 1.5px)
+      0 0 / 260px 260px,
+    radial-gradient(circle, rgba(255,255,255,0.40) 1.2px, transparent 1.3px)
+      120px 80px / 300px 300px,
+
+    /* ✦ 중간 별 (많이) */
+    radial-gradient(circle, rgba(255,255,255,0.30) 1.0px, transparent 1.1px)
+      0 0 / 140px 140px,
+    radial-gradient(circle, rgba(255,255,255,0.26) 0.9px, transparent 1.0px)
+      70px 40px / 160px 160px,
+    radial-gradient(circle, rgba(255,255,255,0.22) 0.85px, transparent 0.95px)
+      30px 90px / 180px 180px,
+
+    /* ✦ 작은 별 (엄청 많게) */
+    radial-gradient(circle, rgba(255,255,255,0.18) 0.7px, transparent 0.8px)
+      0 0 / 90px 90px,
+    radial-gradient(circle, rgba(255,255,255,0.15) 0.6px, transparent 0.7px)
+      45px 20px / 80px 80px,
+    radial-gradient(circle, rgba(255,255,255,0.13) 0.55px, transparent 0.65px)
+      20px 60px / 70px 70px,
+    radial-gradient(circle, rgba(255,255,255,0.11) 0.5px, transparent 0.6px)
+      10px 10px / 60px 60px,
+    radial-gradient(circle, rgba(255,255,255,0.09) 0.45px, transparent 0.55px)
+      35px 15px / 55px 55px;
+
+  opacity: 0.9;
+  animation: none; /* 완전 고정 */
+}
+
+
+.mainpage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    950px 560px at 50% 35%,
+    transparent 44%,
+    rgba(4, 18, 40, 0.75) 100%
+  );
 }
 
 @keyframes starBreath {
@@ -98,79 +142,109 @@
   100% { opacity: 0.58; }
 }
 
-/* vignette */
-.mainpage::after {
-  content: "";
+/* =========================
+   Map Layer (KOREA / USA)
+   ========================= */
+.mapLayer {
   position: absolute;
   inset: 0;
-  /* 🌟 z-index를 2로 낮춰서 topbar(10)보다 뒤로 보냅니다 (로고 보호) */
-  z-index: 2; 
+  z-index: 0;
+  opacity: 0.15;
   pointer-events: none;
-  background: radial-gradient(950px 560px at 50% 35%, transparent 44%, rgba(56, 56, 86, 0.7) 100%);
+  overflow: hidden;
 }
 
-/* ========== Icons Layer (Responsive Scale 수정됨) ========== */
-.iconsLayer{
+.mapKorea,
+.mapUSA,
+.medical,
+.mapte,
+.author {
   position: absolute;
-  inset: 0;
-  z-index: 1;          /* hero(2), topbar(3)보다 아래 */
-  pointer-events: none;
+  filter: grayscale(1) brightness(2);
 }
 
-.icon{
-  position: absolute;
-
-  opacity: 0.12;                     /* 핵심: 배경 느낌 */
-  filter: blur(0.6px) saturate(0.7); /* 선명도 낮추기 */
-  mix-blend-mode: screen;            /* 우주 배경에 자연스럽게 */
-
-  animation: floaty 10s ease-in-out infinite;
-  transform: translateZ(0);
+.mapKorea {
+  left: 10%;
+  top: 10%;
+  animation: floatLeftRight 10s ease-in-out infinite alternate;
 }
-.icon:hover{
-  opacity: 0.12;
-  transform: none;
-  filter: blur(0.6px) saturate(0.7);
+.medical {
+  right: 5%;
+  top: 12%;
+  animation: floatLeftRight 10s ease-in-out infinite alternate;
+}
+.mapUSA {
+  left: 7%;
+  bottom: 5%;
+  animation: floatRightLeft 12s ease-in-out infinite alternate;
 }
 
-/* 🌟 개별 아이콘 크기에 clamp()를 적용하여 화면 크기에 반응하게 만듭니다.
-   형식: clamp(최소크기, 가변크기(vw), 최대크기) */
-/* ===== 상단 ===== */
-.icon-1{ left: 8%;  top: 18%; }
-.icon-2{ left: 28%; top: 14%; }
-.icon-3{ left: 48%; top: 20%; }
-.icon-4{ left: 68%; top: 16%; }
-.icon-5{ left: 86%; top: 22%; }
+.mapte {
+  right: 7%;
+  bottom: 10%;
+  animation: floatRightLeft 12s ease-in-out infinite alternate;
+}
 
-/* ===== 하단 ===== */
-.icon-6{ left: 10%; top: 62%; }
-.icon-7{ left: 30%; top: 70%; }
-.icon-8{ left: 50%; top: 66%; }
-.icon-9{ left: 70%; top: 72%; }
-.icon-10{ left: 88%; top: 68%; }
+.author {
+  left: 40%;
+  top: 25%;
+  animation: floatLeftRight 10s ease-in-out infinite alternate;
+}
 
+.mapmapte{
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
 
-/* ========== Topbar (수정됨) ========== */
+.mapmedical {
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+.mapTextKorea {
+  font-size: 110px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.mapTextUSA {
+  font-size: 75px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+}
+
+.mapauthor{
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+/* =========================
+   Topbar
+   ========================= */
 .topbar {
   position: relative;
-  /* 🌟 확실하게 최상단 레이어로 설정 */
-  z-index: 10; 
+  z-index: 10;
   isolation: isolate;
 
-  height: 52px;
+  height: var(--topbar-h);
   padding: 0 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  /* 🌟 배경 블러 효과를 추가하여 로고 주변 가독성을 높임 */
   background: rgba(10, 12, 28, 0.15);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* brand */
 .brand {
   position: relative;
   display: flex;
@@ -178,26 +252,26 @@
   gap: 10px;
 }
 
-.brand::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  width: 70px;
-  height: 70px;
-  transform: translateY(-50%);
-  background: radial-gradient(circle, rgba(140, 170, 255, 0.35), transparent 65%);
-  z-index: -1;
+.logoImg {
+  width: clamp(90px, 10vw, 124px);
+  height: auto;
+  object-fit: contain;
+  filter:
+    brightness(1.2)
+    contrast(1.1)
+    drop-shadow(0 0 6px rgba(140, 170, 255, 0.45));
+  transition: transform 200ms ease, filter 200ms ease;
 }
 
-.brandText {
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-size: 12px;
-  opacity: 0.95;
+.brand:hover .logoImg {
+  transform: translateY(-1px) scale(1.03);
+  filter:
+    brightness(1.18)
+    contrast(1.10)
+    drop-shadow(0 0 8px rgba(160, 190, 255, 0.70))
+    drop-shadow(0 0 22px rgba(150, 170, 255, 0.35));
 }
 
-/* nav */
 .nav {
   display: flex;
   gap: 34px;
@@ -209,7 +283,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  padding: 6px 8px;
+  padding: 6px 10px;
   border-radius: 10px;
   transition: 0.2s;
 }
@@ -224,64 +298,86 @@
   background: rgba(255, 255, 255, 0.10);
 }
 
-/* logo */
-.logoImg {
-  /* 🌟 화면 높이에 따라 로고 크기도 소폭 반응하도록 수정 */
-  width: clamp(90px, 10vw, 124px); 
-  height: auto;
-  object-fit: contain;
-
-  opacity: 1;
-  /* 🌟 밝기와 선명도를 올려서 배경에 묻히지 않게 함 */
-  filter:
-    brightness(1.2)
-    contrast(1.1)
-    drop-shadow(0 0 6px rgba(140, 170, 255, 0.45));
-
-  transition: transform 200ms ease, filter 200ms ease;
-}
-
-.brand:hover .logoImg {
-  transform: translateY(-1px) scale(1.03);
-  filter:
-    brightness(1.18)
-    contrast(1.10)
-    drop-shadow(0 0 8px rgba(160, 190, 255, 0.70))
-    drop-shadow(0 0 22px rgba(150, 170, 255, 0.35));
-}
-
-/* ========== Hero ========== */
+/* =========================
+   Hero
+   ========================= */
 .hero {
   position: relative;
   z-index: 4;
+  min-height: calc(100vh - var(--topbar-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* dvh 지원이면 “진짜 화면 높이”로 튐 방지 */
+@supports (height: 100dvh) {
+  .hero {
+    min-height: calc(100dvh - var(--topbar-h));
+  }
+}
+
+.heroInner.split {
+  width: min(1100px, 92vw);
+  position: relative;
+  z-index: 6;
+
   display: grid;
-  place-items: center;
-  padding: 80px 20px;
-  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 텍스트 블록 (왼쪽 정렬, 스르륵 등장) */
+.heroRight {
+  text-align: left;
+  animation: slideInRight 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroSphereCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInSphere 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInSphere {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 .title {
   margin: 0;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -0.6px;
-  text-shadow: 0 12px 60px rgba(0,0,0,0.45);
+  font-size: clamp(56px, 6vw, 92px);
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  text-shadow: 0 18px 70px rgba(0,0,0,0.45);
 }
 
 .subtitle {
-  font-size: clamp(14px, 1.25vw, 16px);
+  margin-top: 14px;
+  font-size: clamp(16px, 1.7vw, 20px);
   line-height: 1.7;
-  color: rgba(255,255,255,0.68);
+  color: rgba(255,255,255,0.70);
   max-width: 720px;
+  letter-spacing: 0.08em;
 }
 
-/* ========== Buttons ========== */
+/* =========================
+   Buttons
+   ========================= */
 .ctaRow {
   margin-top: 28px;
   display: flex;
   gap: 14px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -297,119 +393,467 @@
 }
 
 .btnPrimary {
-  background: rgba(85, 110, 255, 0.95);
+  background: rgba(40, 120, 210, 0.88);
   color: white;
-  box-shadow: 0 18px 40px rgba(85, 110, 255, 0.25);
+  box-shadow: 0 18px 40px rgba(30, 110, 200, 0.25);
 }
 
 .btnPrimary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 22px 55px rgba(85, 110, 255, 0.32);
+  box-shadow: 0 22px 55px rgba(30, 110, 200, 0.35);
 }
 
 .btnGhost {
-  background: rgba(255,255,255,0.06);
+  background: rgba(60, 180, 230, 0.20);
   color: rgba(255,255,255,0.92);
-  border-color: rgba(255,255,255,0.16);
+  border-color: rgba(60, 180, 230, 0.28);
 }
 
 .btnGhost:hover {
   transform: translateY(-1px);
-  background: rgba(255,255,255,0.09);
-  border-color: rgba(255,255,255,0.22);
+  background: rgba(60, 180, 230, 0.30);
+  border-color: rgba(60, 180, 230, 0.38);
 }
 
-/* ========== Responsive tweaks ========== */
-@media (max-width: 720px) {
-  .topbar { padding: 0 16px; }
-  .nav { gap: 10px; }
-  .navItem { font-size: 13px; padding: 6px 6px; }
 
-  /* 모바일에서 아이콘 너무 죽지 않게 */
-  .icon { opacity: 0.22; }
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 900px) {
+  .heroInner.split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .heroRight { text-align: center; }
+  .ctaRow { justify-content: center; }
 }
 
-/* 상하좌우로 부드럽게 움직이는 애니메이션 */
-/* 1번 패턴: 좌상단 -> 우하단 부드러운 이동 */
-@keyframes floating-pattern-A {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(15px, -25px) rotate(3deg); }
-  66% { transform: translate(-10px, 15px) rotate(-3deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
+@media (max-width: 600px) {
+  :root { --topbar-h: 60px; }
 
-/* 2번 패턴: 원형을 그리듯 느릿한 이동 */
-@keyframes floating-pattern-B {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(-25px, 20px) rotate(5deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
+  .mapLayer { display: none; }
 
-/* 3번 패턴: 대각선 반전 이동 */
-@keyframes floating-pattern-C {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  40% { transform: translate(20px, 10px) rotate(-4deg); }
-  80% { transform: translate(-5px, -20px) rotate(2deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
+  .title {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+  .subtitle {
+    font-size: clamp(14px, 3.8vw, 16px);
+    letter-spacing: 0.04em;
+  }
+  .ctaRow {
+    gap: 10px;
+  }
+  .btnPrimary,
+  .btnGhost {
+    height: 42px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+  .heroInner.split {
+    width: 90vw;
+    gap: 20px;
+  }
 }
-/* 공통 아이콘 속성 */
-.icon {
+/* =========================
+   Scroll Arrow
+   ========================= */
+.scrollArrow {
   position: absolute;
-  opacity: 0.58;
-  filter: blur(0.1px);
-  user-select: none;
-  transition: width 0.3s ease; /* 화면 크기 조절 시 부드럽게 */
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  color: rgba(80, 190, 240, 0.50);
+  border: 1px solid rgba(60, 180, 230, 0.18);
+  border-radius: 50%;
+  background: rgba(40, 130, 200, 0.06);
+  backdrop-filter: blur(6px);
+
+  transition: color 200ms, border-color 200ms, background 200ms;
+  animation: arrowBounce 2.2s ease-in-out infinite;
 }
 
-/* 아이콘 1 ~ 10 개별 설정 */
-.icon-1 { 
-  left: 10%; top: 22%; width: clamp(80px, 15vw, 170px); 
-  animation: floating-pattern-A 18s infinite; 
+.scrollArrow:hover {
+  color: rgba(160, 230, 255, 0.92);
+  border-color: rgba(80, 195, 240, 0.35);
+  background: rgba(40, 140, 210, 0.12);
 }
 
-.icon-2 { 
-  left: 25%; top: 52%; width: clamp(70px, 12vw, 150px); 
-  animation: floating-pattern-B 22s infinite; 
+.scrollArrow svg {
+  width: 20px;
+  height: 20px;
 }
 
-.icon-3 { 
-  right: 18%; top: 28%; width: clamp(70px, 12vw, 140px); 
-  animation: floating-pattern-C 25s infinite; 
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(7px); }
 }
 
-.icon-4 { 
-  right: 12%; top: 18%; width: clamp(80px, 14vw, 165px); 
-  animation: floating-pattern-A 20s infinite reverse; 
+/* =========================
+   About Section
+   ========================= */
+.aboutSection {
+  position: relative;
+  z-index: 4;
+  padding: 100px 40px 120px;
+  display: flex;
+  justify-content: center;
 }
 
-.icon-5 { 
-  right: 18%; top: 35%; width: clamp(120px, 20vw, 245px); 
-  animation: floating-pattern-B 28s infinite; 
+.aboutWrap {
+  width: min(1000px, 92vw);
+  display: flex;
+  flex-direction: column;
 }
 
-.icon-6 { 
-  right: 27%; bottom: 18%; width: clamp(100px, 16vw, 200px); 
-  animation: floating-pattern-C 23s infinite reverse; 
+.aboutSep {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 72px 0;
 }
 
-.icon-7 { 
-  left: 15%; bottom: 25%; width: clamp(100px, 16vw, 200px); 
-  animation: floating-pattern-A 30s infinite; 
+.aboutRow {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: flex-start;
 }
 
-.icon-8 { 
-  right: 35%; bottom: 12%; width: clamp(100px, 16vw, 205px); 
-  animation: floating-pattern-B 26s infinite reverse; 
+.aboutLeft {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.icon-9 { 
-  left: 32%; bottom: 10%; width: clamp(100px, 16vw, 205px); 
-  animation: floating-pattern-C 32s infinite; 
+.aboutTag {
+  display: inline-block;
+  width: fit-content;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(100, 200, 245, 0.82);
+  border: 1px solid rgba(70, 180, 230, 0.25);
+  border-radius: 20px;
+  padding: 5px 14px;
 }
 
-.icon-10 { 
-  left: 40%; bottom: -5%; width: clamp(150px, 25vw, 285px); 
-  animation: floating-pattern-A 35s infinite; 
+.aboutTitle {
+  margin: 0;
+  font-size: clamp(38px, 4vw, 56px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  color: #fff;
+}
+
+.aboutGrad {
+  font-style: italic;
+  color: rgba(100, 200, 245, 0.92);
+}
+
+.aboutRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.aboutBody {
+  margin: 0;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.65);
+  word-break: keep-all;
+}
+
+.aboutBody b {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+}
+
+.aboutPills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.aboutPills li {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(160, 235, 255, 0.88);
+  background: rgba(50, 170, 220, 0.10);
+  border: 1px solid rgba(50, 170, 220, 0.20);
+  border-radius: 8px;
+  padding: 6px 16px;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 750px) {
+  .aboutSection {
+    padding: 70px 24px 90px;
+  }
+  .aboutRow {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .aboutLeft {
+    flex: none;
+  }
+  .aboutSep {
+    margin: 52px 0;
+  }
+}
+
+/* =========================
+   Network (Glow)
+   ========================= */
+.network {
+  position: absolute;
+  right: 15%;
+  top: 52%;
+  transform: translateY(-50%);
+
+  width: min(520px, 42vw);
+  height: auto;
+
+  z-index: 4;          /* 배경 위, 텍스트 아래 */
+  pointer-events: none;
+  opacity: 0.95;
+
+  filter: drop-shadow(0 0 14px rgba(170, 195, 255, 0.35))
+          drop-shadow(0 0 34px rgba(140, 170, 255, 0.30));
+}
+
+
+/* 라인: 그려졌다가 사라지기 + 은은한 glow */
+.network .l {
+  stroke: rgba(80, 180, 235, 0.50);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+
+  /* draw animation */
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+
+  animation: draw 6.8s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* 노드: 빛나는 펄스 + halo */
+.network .n {
+  fill: rgba(160, 235, 255, 0.95);
+  animation: pulse 2.8s ease-in-out infinite;
+}
+
+/* 노드에 halo 느낌 추가 */
+.network .n {
+  filter: drop-shadow(0 0 10px rgba(60, 180, 230, 0.55))
+          drop-shadow(0 0 24px rgba(40, 150, 210, 0.30));
+}
+
+/* ✅ 타이밍을 엇갈리게 해서 “생성→연결→소멸” 흐름 만들기 */
+.network .l1 { animation-delay: 0.0s; }
+.network .l2 { animation-delay: 0.6s; }
+.network .l3 { animation-delay: 1.2s; }
+.network .l4 { animation-delay: 1.8s; }
+.network .l5 { animation-delay: 2.4s; }
+.network .l6 { animation-delay: 3.0s; }
+
+.network .n1 { animation-delay: 0.0s; }
+.network .n2 { animation-delay: 0.3s; }
+.network .n3 { animation-delay: 0.6s; }
+.network .n4 { animation-delay: 0.9s; }
+.network .n5 { animation-delay: 1.2s; }
+
+@keyframes draw {
+  0%   { stroke-dashoffset: 220; opacity: 0; }
+  15%  { opacity: 0.85; }
+  45%  { stroke-dashoffset: 0; opacity: 0.95; }
+  70%  { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+/* 모바일에서는 숨기기 */
+@media (max-width: 900px) {
+  .network { display: none; }
+}
+
+/* =========================
+   Brand Letter 3D Flip (Front / Back)
+   ========================= */
+.title {
+  perspective: 900px;            /* 3D 깊이 */
+  transform-style: preserve-3d;
+}
+
+.brandTitle {
+  display: inline-block;
+  transform: translateZ(0);      /* 렌더링 안정화 */
+}
+
+.brandK,
+.brandA {
+  display: inline-block;
+  font-weight: 900;
+
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.brandOHeart {
+  display: inline;
+  font-style: normal;
+  font-size: 0.55em;
+  line-height: 1;
+  vertical-align: 0.18em;
+  text-shadow: none;
+  filter: none;
+}
+
+/* K : Y축 앞뒤 */
+.brandK {
+  color: rgba(80, 190, 255, 1);
+  text-shadow: 0 0 24px rgba(50, 160, 230, 0.50);
+  animation: flipK 6s ease-in-out infinite;
+}
+
+/* A : X축 앞뒤 */
+.brandA {
+  color: rgb(160, 235, 255);
+  text-shadow: 0 0 24px rgba(60, 190, 230, 0.45);
+  animation: flipA 7.5s ease-in-out infinite;
+}
+
+@keyframes flipK {
+  0%, 100% { transform: translateZ(0px) rotateY(0deg); }
+  25%      { transform: translateZ(16px) rotateY(18deg); }
+  50%      { transform: translateZ(0px) rotateY(0deg); }
+  75%      { transform: translateZ(12px) rotateY(-14deg); }
+}
+
+@keyframes flipA {
+  0%, 100% { transform: translateZ(0px) rotateX(0deg); }
+  30%      { transform: translateZ(14px) rotateX(-16deg); }
+  60%      { transform: translateZ(0px) rotateX(0deg); }
+  85%      { transform: translateZ(10px) rotateX(12deg); }
+}
+
+/* ── 전환 속도 ── */
+.mainpage .bg,
+.mainpage .glow::before,
+.mainpage .glow::after,
+.brandK,
+.brandA,
+.btnPrimary,
+.btnGhost,
+.aboutTag,
+.aboutGrad,
+.scrollArrow {
+  transition:
+    color 0.7s ease,
+    background 0.7s ease,
+    box-shadow 0.7s ease,
+    border-color 0.7s ease,
+    text-shadow 0.7s ease,
+    filter 0.7s ease;
+}
+
+/* =========================
+   Full-screen Water Flow Layer
+   ========================= */
+.waterLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.waterStream {
+  position: absolute;
+  left: -30%;
+  width: 160%;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(30, 120, 205, 0.055) 20%,
+    rgba(50, 175, 235, 0.10) 50%,
+    rgba(30, 120, 205, 0.055) 80%,
+    transparent 100%
+  );
+  filter: blur(18px);
+}
+
+.s1 { top: 10%; animation: streamOsc 17s ease-in-out infinite; }
+.s2 { top: 28%; animation: streamOsc 23s ease-in-out infinite; animation-delay: -7s; opacity: 0.85; }
+.s3 { top: 48%; animation: streamOsc 19s ease-in-out infinite; animation-delay: -13s; }
+.s4 { top: 67%; animation: streamOsc 21s ease-in-out infinite; animation-delay: -4s; opacity: 0.75; }
+.s5 { top: 84%; animation: streamOsc 15s ease-in-out infinite; animation-delay: -10s; }
+
+@keyframes streamOsc {
+  0%   { transform: translateX(0)    scaleY(1);   opacity: 0.70; }
+  25%  { transform: translateX(-6%)  scaleY(1.3); opacity: 1;    }
+  60%  { transform: translateX(5%)   scaleY(0.85);opacity: 0.80; }
+  100% { transform: translateX(0)    scaleY(1);   opacity: 0.70; }
+}
+
+/* =========================
+   Hero Bottom Accent Waves
+   ========================= */
+.heroWaves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.hw1 { animation: waveScroll 13s linear infinite; }
+.hw2 { animation: waveScroll 20s linear infinite reverse; bottom: 8px; }
+.hw3 { animation: waveScroll 28s linear infinite; bottom: 16px; }
+
+@keyframes waveScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

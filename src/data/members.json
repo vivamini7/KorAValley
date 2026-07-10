@@ -6,21 +6,22 @@
     "avatar": "cheo.png",
     "quote": "청년들이 본인의 길을 선택하도록 돕는 것",
     "bullets": [
-      "웹/앱 서비스 개발",
-      "사이드 프로젝트",
-      "독서모임 운영"
+      "백엔드 개발",
+      "독서",
+      "투자"
     ],
     "goals": [
-      "청년 자립 지원 시스템 구축",
-      "경제적/시간적 자유 달성"
+      "이력서, 포트폴리오 완성",
+      "프로젝트 기술적 문제해결 정리",
+      "프로젝트 관련 개념 정리",
+      "대규모 시스템 설계, CS 공부",
+      "코딩테스트 프로그래머스 Lv.3까지, 기출문제 풀이 완료"
     ],
     "links": {
-      "linkedin": "",
-      "email": "",
-      "notion": "",
-      "instagram": ""
+      "linkedin": "https://www.linkedin.com/in/0921sean/",
+      "email": "0921sean@gmail.com"
     },
-    "generation" : 0,
+    "generation" : -1,
     "group": "founding"
   },
   {
@@ -28,80 +29,39 @@
     "name": "조예찬",
     "role": "Medical AI",
     "avatar": "zo.png",
-    "quote": "사람들이 소소한 것에서도 행복을 느끼며 살 수 있는 것",
+    "quote": "사람들이 삶 속에서 소소한 것에서도 \n행복을 느끼며 사는 것",
     "bullets": [
-      "MRI + AI Research",
-      "음악 작곡 (J:IAN)",
-      "커뮤니티 빌딩"
+      "Medical AI Researcher",
+      "(Incoming) Research Intern @ NIH",
+      "(Prev) AI Engineer @ Mediark"
     ],
     "goals": [
-      "CVPR 2027 논문 투고 (SHARP-Buffer)",
-      "NIH Summer Internship 합격"
+      "Top Tier Medical AI Conference (CVPR, MICCAI 등) 1저자 논문 투고 및 Accept", 
+      "미국 최상위권 대학(Harvard, MIT, Stanford, JHU 등) 박사 과정 지원 자격 완비",
+      "NIH AIP(Academic Internship Program) 합격",
+      "TOEFL iBT 110점 이상 달성 (L/R/S/W 각 영역 27+ 목표)",
+      "체지방률/골격근량 2021년 기준 수치 회복"
     ],
     "links": {
-      "linkedin": "",
-      "email": "",
-      "notion": "",
-      "instagram": ""
+      "linkedin": "https://www.linkedin.com/in/ivchxn/",
+      "email": "johnjo1116@gmail.com"
     },
-    "generation" : 0,
+    "generation" : -1,
     "group": "founding"
-  },
-  {
-    "id": 3,
-    "name": "신재욱",
-    "role": "Medical AI",
-    "avatar": "image_shin_jw.png",
-    "quote": "미래의 행복한 모습을 상상하는 것",
-    "bullets": [
-      "로보틱스 학습",
-      "의료 AI 프로젝트",
-      "미래 설계"
-    ],
-    "goals": [
-      "의료 로봇 분야 전문성 확보",
-      "행복한 미래 구체화"
-    ],
-    "links": {
-      "linkedin": "",
-      "email": ""
-    },
-    "generation" : 0
-  },
-  {
-    "id": 4,
-    "name": "서희찬",
-    "role": "Robotics",
-    "avatar": "image_seo.png",
-    "quote": "인류에 기여할 수 있는 삶을 사는 것",
-    "bullets": [
-      "로봇 제어 연구",
-      "웹/앱 개발",
-      "기술 사회 공헌"
-    ],
-    "goals": [
-      "인류 기여 로봇 기술 개발",
-      "웹/앱 서비스 확장"
-    ],
-    "links": {
-      "linkedin": "",
-      "email": ""
-    },
-    "generation" : 0
   },
   {
     "id": 5,
     "name": "윤상민",
-    "role": "HCI+AI",
+    "role": "Data-intelligent with Agent",
     "avatar": "yoon.png",
     "quote": "모두가 공평한 기회를 누릴 수 있는 사회",
     "bullets": [
-      "HCI+AI Researcher",
+      "DIL+AI Researcher",
       "Author & Reader",
       "Social Entrepreneur"
     ],
     "goals": [
-      "HCI 연구실 진학",
+      "DIL+AI Researcher 연구실 진학",
       "개인 단편 소설 출간 & 대회 수상",
       "주식 분야별 공부, follow-up & 수익률 목표 달성",
       "영어 시험 3개 고득점 마무리",
@@ -115,107 +75,125 @@
     "generation" : 0
   },
   {
-    "id": 6,
-    "name": "신영진",
-    "role": "Engineering",
-    "avatar": "image_shin_yj.png",
-    "quote": "하루하루 성취의 재미를 느끼는 것",
+    "id": 3,
+    "name": "신재욱",
+    "role": "Physical AI - Med",
+    "avatar": "image_shin_jw.png",
+    "quote": "질병의 완치가 더 이상 \n기적이 아닌 세상을 만드는 것",
     "bullets": [
-      "전기전자 회로 설계",
-      "일상 기록",
-      "자기 계발"
+      "Med Student",
+      "SNUCM Lab Research Intern",
+      "운동, 여행"
     ],
     "goals": [
-      "매일의 성취를 통한 성장",
-      "전기전자 분야 커리어 발전"
+      "Neurocomputation Model 개발",
+      "UC Lab Internship",
+      "꾸준히 영어 공부 (GRE 함께 준비)",
+      "꾸준히 운동",
+      "Premed 수료"
     ],
     "links": {
       "linkedin": "",
-      "email": ""
+      "email": "jaeuk308@gmail.com"
     },
-    "generation" : 1
+    "generation" : 0
   },
   {
-    "id": 7,
-    "name": "김은지",
-    "role": "Business",
-    "avatar": "image_kim_ej.png",
-    "quote": "나의 경험을 통해 사람들에게 위로와 동기부여를 주는 것",
+    "id": 4,
+    "name": "서희찬",
+    "role": "AI Fairness",
+    "avatar": "image_seo.png",
+    "quote": "I'm developing for our lives",
     "bullets": [
-      "삼성전자 근무",
-      "직장인 멘토링",
-      "에세이 집필"
+      "AI Researcher",
+      "My4cut CEO",
+      "Climbing"
     ],
     "goals": [
-      "직장인 멘토링 활동 확장",
-      "동기부여 콘텐츠 제작"
+      "CMU연구 프로젝트 최종 논문 제출하기",
+      "My4cut 부스 시장에 런치하고, 소프트웨어 자동화 + 부스 하드웨어까지 이어지는 실제 수익 모델로 확장하기",
+      "인생 로드맵을 확정하기",
+      "개인 브랜드(dev_seochan)와 출판을 통해 ‘연구하는 빌더’ 정체성을 콘텐츠와 커뮤니티로 확장하기",
+      "클라이밍, 운동, 식단을 루틴화해서, 바쁜 일정 속에서도 지속 가능한 체력과 멘탈을 유지하기"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "https://www.linkedin.com/in/huichan-seo-443173265/",
+      "email": "gmlcks00513@gmail.com"
     },
-    "generation" : 1
-  },
-  {
-    "id": 8,
-    "name": "정성민",
-    "role": "AI+Robotics",
-    "avatar": "image_jung.png",
-    "quote": "매일매일 성취감을 느끼며 행복한 노후를 보내는 것",
-    "bullets": [
-      "지능형 로봇 연구",
-      "석사 논문 작성",
-      "성취감 기록"
-    ],
-    "goals": [
-      "지능형 로봇 석사 학위 취득",
-      "행복한 노후 기반 마련"
-    ],
-    "links": {
-      "linkedin": "",
-      "email": ""
-    },
-    "generation" : 1
+    "generation" : 0
   },
   {
     "id": 9,
     "name": "김영준",
     "role": "Economics",
     "avatar": "image_kim_yj.png",
-    "quote": "주위에 선한 영향력을 끼치고 전 세계가 행복해지는 것",
+    "quote": "선한 영향력을 만들어내기 위해 전문성을 꾸준히 쌓고, 궁극적으로 인류의 번영과 행복한 삶에 기여",
     "bullets": [
-      "금융 공학 연구",
-      "경제 모델링",
-      "봉사 활동"
+      "Corporate Finance(기업재무) 분야 연구",
+      "투자/금융시장 현안 놓치지 않고 follow-up",
+      "음악(피아노)"
     ],
     "goals": [
-      "선한 영향력 전파",
-      "글로벌 경제 연구 성과 도출"
+      "2027 박사과정 합격",
+      "석사논문 디펜스 통과 및 석사 4.5 졸업",
+      "공동연구 SSCI 저널 게재",
+      "RA 여러 개 무사 완수",
+      "지덕체(교양 및 전공지식, 인간관계, 건강 및 예체능) 골고루 쌓기"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "http://www.linkedin.com/in/young-june-kim-90b4b51a6",
+      "email": "kimjune2020@hanyang.ac.kr"
+    },
+    "generation" : 1
+  },
+  {
+    "id": 8,
+    "name": "정성민",
+    "role": "Robotics, CV",
+    "avatar": "image_jung.png",
+    "quote": "로봇을 통해 사람들의 삶을 \n더 편리하게 하는 것",
+    "bullets": [
+      "Robotics & AI researcher",
+      "Web development",
+      "Traveling"
+    ],
+    "goals": [
+      "논문 2개 이상 작성",
+      "취업 또는 미국 대학원 진학",
+      "매일 투자 공부 하기",
+      "꾸준히 개인 블로그 관리하기",
+      "가족, 친구들과 여행가기"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/seongmin-jung-aa9460218?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+      "email": "sjung.vision@gmail.com"
     },
     "generation" : 1
   },
   {
     "id": 10,
     "name": "이연희",
-    "role": "Biotech",
+    "role": "Drug Discovery",
     "avatar": "image_lee_yh.png",
-    "quote": "필요한 상황에 필요한 약을 필요한 사람에게 공급하는 것",
+    "quote": "사람들에게 긍정적인 영향을 주는 \n삶을 실천하는 것",
     "bullets": [
-      "신약 개발 연구",
-      "의약품 유통 분석",
-      "바이오 트렌드 분석"
+      "Drug Discovery Researcher",
+      "Student Leader and Mentor",
+      "Swimmer"
     ],
     "goals": [
-      "신약 개발 연구 참여",
-      "의약품 접근성 문제 해결"
+      "Summer Internship 지원 및 준비하기",
+      "PhD 지원 준비 및 진학하기",
+      "Multimodal AI app 구축하기",
+      "한/미 Patent 개념 학습하기",
+      "경제 관념 및 주식 투자 공부하기",
+      "언어: 영어 시험 목표 점수 달성 및 전문 용어 습득하기",
+      "독서: 한/영 각각 50권 달성하기",
+      "운동: 목표 근육량/체지방량 달성하기"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "http://www.linkedin.com/in/kirsten-lee-270482309",
+      "email": "kirstenlee082@gmail.com"
     },
     "generation" : 1
   },
@@ -224,40 +202,46 @@
     "name": "최서연",
     "role": "Business",
     "avatar": "image_choi_sy.png",
-    "quote": "세상에 긍정적인 영향을 끼치는 것",
+    "quote": "열정있는 사람들이 원하는 일을 펼칠 수 있는 \n사회를 만드는 것",
     "bullets": [
-      "경영 전략 학회",
-      "노어노문 번역",
-      "소셜 임팩트 프로젝트"
+      "Business Research",
+      "Startup",
+      "독서"
     ],
     "goals": [
-      "소셜 임팩트 프로젝트 리딩",
-      "글로벌 비즈니스 역량 강화"
+      "진로 세부분야 탐색 및 페이퍼 작성",
+      "프로젝트 3개 진행",
+      "개인 취미 프로젝트 시작",
+      "경제/시사/언어 공부 루틴 만들기",
+      "교환학생 준비 및 생활"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "http://www.linkedin.com/in/seoynerinchoi",
+      "email": "seoyn@yonsei.ac.kr"
     },
     "generation" : 1
   },
   {
     "id": 12,
     "name": "김진호",
-    "role": "Medical AI",
+    "role": "Neuroscience + AI",
     "avatar": "image_kim_jh.png",
-    "quote": "소외된 사람에게도 편의가 돌아가는 기술을 만드는 것",
+    "quote": "모두가 꿈을 향해 노력할 수 있는 \n세상을 만드는 데 기여하는 것",
     "bullets": [
-      "뇌과학(Neurology) 연구",
-      "헬스케어 데이터 분석",
-      "기술 봉사"
+      "Researcher @ NYULH",
+      "소설 쓰기",
+      "기타 연주곡 작곡"
     ],
     "goals": [
-      "소외 계층을 위한 AI 기술 구현",
-      "뇌과학 분야 심층 연구"
+      "ML A* Conference 단독 1저자 논문 제출",
+      "TOEFL 점수 미국 대학원 커트라인 넘기기",
+      "하프 마라톤 완주",
+      "단편소설 완성",
+      "일렉기타 배우기 + 밴드 활동"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "https://www.linkedin.com/in/jinho-kim-dku",
+      "email": "jinho.kim@nyulangone.org"
     },
     "generation" : 1
   },
@@ -288,29 +272,31 @@
   {
     "id": 14,
     "name": "유재호",
-    "role": "Develop",
+    "role": "iOS Engineer",
     "avatar": "image_yu.png",
-    "quote": "가족의 안정과 평안을 이루어내는 것",
+    "quote": "내 사람들 잘 챙기자!",
     "bullets": [
-      "iOS 앱 개발",
-      "보드게임",
-      "기술 블로그 운영"
+      "iOS 모바일 개발",
+      "사이드 프로젝트",
+      "외국어 공부"
     ],
     "goals": [
-      "2026년 목표 초과 달성",
-      "iOS 개발 역량 심화",
-      "가족의 평안 유지"
+      "몸매 관리 (70 후반대로 다이어트)",
+      "애플 앱스토어 <오늘의 앱> 선정",
+      "인디 보드게임 제작",
+      "OPIc AL 취득",
+      "JLPT N4, N3 취득"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "https://www.linkedin.com/in/jageryoo/",
+      "email": "y73447jh@gmail.com"
     },
     "generation" : 2
   },
   {
     "id": 15,
     "name": "박상준",
-    "role": "Climate Macroeconomics",
+    "role": "Macroeconomics",
     "avatar": "image_park.png",
     "quote": "There is no wealth but life—life including all its powers of love, of joy, and of admiration",
     "bullets": [
@@ -336,7 +322,7 @@
     "name": "배경덕",
     "role": "Investment",
     "avatar": "image_bae.png",
-    "quote": "변화하는 세상에서 뒤쳐지지 않는 인생 포트폴리오 만들기",
+    "quote": "변화하는 세상에서 뒤쳐지지 않는 \n인생 포트폴리오 만들기",
     "bullets": [
       "Biotech Investment",
       "Workout",
@@ -358,22 +344,24 @@
   {
     "id": 17,
     "name": "전상우",
-    "role": "Business",
+    "role": "Finance, AI",
     "avatar": "image_jeon.png",
-    "quote": "함께 성장하는 환경 속에서 흔들림 없이 제 길을 나아가는 것",
+    "quote": "후회없는 매일을 살자",
     "bullets": [
-      "초기 스타트업 운영",
-      "금융 상품 학회",
-      "춤 & 헬스"
+      "Legal Tech Startup CFO",
+      "Undergraduate Intern in Applied Statistics",
+      "Equity Researcher"
     ],
     "goals": [
-      "대학원 진학 준비",
-      "스타트업 경영 안정화",
-      "금융 학회 운영"
+      "스타트업 사업 안정화",
+      "락킹 기본기 탄탄히",
+      "국내 데이터분석 대회 3위 안으로 수상",
+      "오라클 자격증 취득",
+      "기록 습관화"
     ],
     "links": {
-      "linkedin": "",
-      "email": ""
+      "linkedin": "https://www.linkedin.com/in/sangwoochon",
+      "email": "csw02087@gmail.com"
     },
     "generation" : 2
   },
@@ -405,23 +393,331 @@
   {
     "id": 19,
     "name": "김세현",
-    "role": "Business",
+    "role": "Finance, Math Guide",
     "avatar": "image_kim_sh.png",
-    "quote": "후회 없이 몰입하며 살아있음을 느끼는 것",
+    "quote": "내 삶을 책임지고 살자",
     "bullets": [
-      "수학 교육 서비스 런칭",
-      "퍼스널 브랜딩",
-      "금융권 인턴십 준비"
+      "FInance",
+      "Youtuber(@갓생세혀니)",
+      "Math Study Guide"
     ],
     "goals": [
-      "수학 서비스 월매출 100만원 달성",
-      "금융권 인턴 합격",
-      "퍼스널 브랜딩 성공"
+      "인턴 1회 이상",
+      "미국으로 교환학생 다녀오기",
+      "유튜브 구독자 1만 달성",
+      "부업으로 매출 100만원 이상 벌어보기",
+      "투자 레포트 써서 아카이빙"
     ],
     "links": {
       "linkedin": "",
-      "email": ""
+      "email": "food6368@naver.com"
     },
     "generation" : 2
+  },
+  {
+    "id": 20,
+    "name": "서정원",
+    "role": "Medical AI",
+    "avatar": "seo_j.png",
+    "quote": "사람들이 하루라도 더 건강하고 행복하게 사는 데에 기여하는 것",
+    "bullets": [
+      "Medical AI Research",
+      "Workout", 
+      "Dance"
+    ],
+    "goals": [
+      "AI Top 컨퍼런스 1저자 논문 투고 및 승인",
+      "HCI 컨퍼런스/저널 1저자 논문 투고 및 승인",
+      "주 3회 이상 운동, 인바디 목표치 도달 후 바디프로필 촬영",
+      "월 1권 이상 독서 및 독후감 작성",
+      "주 5회 이상 전화영어",
+      "개인 블로그 관리"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/jjeongwon",
+      "email": "jjeongwon8u8@gmail.com"
+    },
+    "generation" : 2
+  },
+  {
+    "id": 21,
+    "name": "김예진",
+    "role": "Medical AI",
+    "avatar": "kim_ye.png",
+    "quote": "감사와 만족으로 행복해지는 세상을 만드는 것",
+    "bullets": [
+      "AI major student",
+      "Climbing",
+      "Reading"
+    ],
+    "goals": [
+      "2026 여름부터 학부생인턴 시작하기",
+      "연구 주제 정하기",
+      "3-1/3-2 전공 성적 모두 A대 받기",
+      "공인어학시험 고득점 달성하기",
+      "매일 노션에 기록하는 습관 들이며 부지런해지기",
+      "공부/운동/인간관계 어느 하나 소홀히 하지 않기"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "whitegracekim@gmail.com"
+    },
+    "generation" : 2
+  },
+  {
+    "id": 23,
+    "name": "정지원",
+    "role": "Accessibility Tech",
+    "avatar": "jung_jw.png",
+    "quote": "누군가에게는 당연한 일상이 모두에게 당연해질 수 있도록, 세상에 긍정적인 변화를 만드는 것",
+    "bullets": [
+      "모바일 앱 개발(iOS)",
+      "앱 개발 외주",
+      "힙합 음악 감상"
+    ],
+    "goals": [
+      "시각장애인을 위한 SDK를 설계하고 구현",
+      "개발한 서비스를 실제로 셀링까지 경험",
+      "블로그와 릴스를 통해 퍼스널 브랜딩 구축",
+      "진행 중인 외주 프로젝트 완성도 있게 마무리",
+      "하반기 내 취업 달성"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/codejiwon",
+      "email": "loopy0107@naver.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 24,
+    "name": "김예나",
+    "role": "Pharmaceutical Sci, AI",
+    "avatar": "kim_yn.png",
+    "quote": "지나간 일에 머무르지 않고 앞으로 나아가, 누군가에게 힘이 되는 사람이 되는 것",
+    "bullets": [
+      "Pharmacy Student",
+      "Short Track Speed Skating",
+      "Violin"
+    ],
+    "goals": [
+      "RWD 기반 약학 research lab 진입",
+      "학점 4.0/4.5 이상",
+      "TOEFL 고득점 취득",
+      "주 3회 이상 운동 습관 형성",
+      "AI 활용 능력 기르기"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/yenakim123",
+      "email": "yenakim040629@gmail.com"
+    },
+    "objectPosition": "65% 40%",
+    "generation": 3
+  },
+  {
+    "id": 26,
+    "name": "김지우",
+    "role": "Product Builder",
+    "avatar": "kim_jw.png",
+    "quote": "사람들의 하루에 작은 행복 하나를 더하는 것",
+    "bullets": [
+      "AI Engineer",
+      "Mobile Developer",
+      "Startup"
+    ],
+    "goals": [
+      "해커톤 4회 이상 참가하기",
+      "스타트업 인턴해보기",
+      "앱 출시해서 유저 1000명 달성하기",
+      "OPIc AL 취득하기",
+      "꾸준히 운동하기"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/jiwookm/",
+      "email": "jiwookim211@gmail.com"
+    },
+    "generation": 3
+  },
+    {
+    "id": 25,
+    "name": "한주아",
+    "role": "Physical AI",
+    "avatar": "han_ja.png",
+    "quote": "Beyond technology, building a healthier AI ecosystem",
+    "bullets": [
+      "VLA Researcher",
+      "DJ",
+      "Watching cat videos"
+    ],
+    "goals": [
+      "Top-tier AI conference submission",
+      "9월까지 토플 105점 이상 득점하기",
+      "미국 Ph.D 지원 컨텍리스트 7월까지 만든 뒤 하반기에 해당 연구실 재학생들과 커피챗하기 (5명 이상!)",
+      "나라 상관없이 취업가능성 열어두고 각 분야에 계신 분들 이야기 많이 듣고 진로에 반영하기 (10명 이상!)",
+      "6월부터 주 2회, 1시간 이상 운동하기",
+      "DJ mixset이나 edit 5개 이상 만들기"
+    ],
+    "links": {
+      "linkedin": "http://www.linkedin.com/in/jua-han-903a05280",
+      "email": "juachef@gmail.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 27,
+    "name": "문재혁",
+    "role": "Power Engineering",
+    "avatar": "moon_jh.png",
+    "quote": "전세계의 안정적인 전력 인프라 구축",
+    "bullets": [
+      "Power Engineering",
+      "철학 공부",
+      "테니스"
+    ],
+    "goals": [
+      "ASU In-Campus job 얻기",
+      "전력/에너지 관련 봉사활동 및 Community Activity 참여하기",
+      "미국 가기 전 산업안전컨설팅 AI 프로젝트 완결(~26년 8월)",
+      "블로그 5편 이상 작성",
+      "주 3회이상 꾸준히 운동"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/jaehyuk-moon-736225231/?locale=ko",
+      "email": "ans0647@gmail.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 28,
+    "name": "정수민",
+    "role": "Medical AI",
+    "avatar": "jung_sm.png",
+    "quote": "사람들이 더 건강하고 행복한 삶을 살 수 있도록 돕는 것",
+    "bullets": [
+      "Medical AI Researcher",
+      "PhD Student in Data Science, NYU",
+      "Workout"
+    ],
+    "goals": [
+      "co-first 저널 논문 출판 마무리",
+      "co-author 학회 논문 출판",
+      "AI 수학 기초 개념 정리",
+      "대규모 실험을 위한 엔지니어링 역량 키우기 (multi-GPU, AWS..)",
+      "영어 회화 꾸준히 이어가기",
+      "비자, 집, 짐 등 출국 준비 완료",
+      "가족, 마루, 친구들과 최대한 많은 시간 보내기",
+      "폴 회원권 끝까지 다 쓰기",
+      "책 10권 읽기",
+      "낯선 환경에서 빠르게 생활 루틴 잡기",
+      "새로운 메인 운동 발굴하기",
+      "친구 사귀기"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/soominchung9910/",
+      "email": "soomin.chung.9910@gmail.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 29,
+    "name": "설예원",
+    "role": "Medical AI",
+    "avatar": "seol_yw.png",
+    "quote": "나의 능력으로 사람들이 행복해지는 것",
+    "bullets": [
+      "학생",
+      "정시 컨설팅",
+      "밴드(보컬)"
+    ],
+    "goals": [
+      "부전공 학점 채우기",
+      "영어공부(공인어학성적 고득점, 화상영어)",
+      "학점 4점대 유지",
+      "데이터 분석 공부",
+      "컨설턴트 계약 성공",
+      "성공적인 밴드부 공연",
+      "대외활동 참여"
+    ],
+    "links": {
+      "linkedin": "",
+      "email": "ywcellena0109@gmail.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 30,
+    "name": "김명주",
+    "role": "Climate with AI",
+    "avatar": "kim_mj.png",
+    "quote": "더 나은 세상을 만들어갈 수 있도록 선한 영향력을 발휘하는 것",
+    "bullets": [
+      "ESG Consultant",
+      "Climate Risk Researcher",
+      "Traveling with a Book/Movie"
+    ],
+    "goals": [
+      "미국 대학원 온보딩 및 연구실 연구 참여(RA)",
+      "KPMG 인턴 졸업",
+      "Climate geo AI스터디 진행 및 github 공유",
+      "한국사능력검정시험 심화 합격",
+      "미국 대학원 외부 장학금 수여",
+      "영어공부(타임즈 기사) 유지",
+      "듀오링고 프랑스어 연속학습 유지",
+      "운동 헬스 주 3회 이상"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/myeongju-adeline-kim-5b27b7218/",
+      "email": "kimmyeongju0817@gmail.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 31,
+    "name": "이태경",
+    "role": "Intl Studies, AI",
+    "avatar": "lee_tk.png",
+    "quote": "사람들의 일상 속 페인포인트를 해소하는 솔루션을 만들어 살기 편안한 세상을 만드는 것",
+    "bullets": [
+      "International NGO Secretariat Intern",
+      "Founder of NUTSHL",
+      "Vibe Coding Development"
+    ],
+    "goals": [
+      "빅테크 취업",
+      "NUTSHL 특허 출원",
+      "중국어 회화 실력 기르기",
+      "꾸준한 운동 루틴 습관화",
+      "교육 봉사"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/taekyungleee",
+      "email": "nicky.lee22@gmail.com"
+    },
+    "generation": 3
+  },
+  {
+    "id": 32,
+    "name": "성현중",
+    "role": "Physical AI, MedDevice",
+    "avatar": "seong_hj.png",
+    "quote": "국경을 넘어 사람들이 즐기며 서로 돕고, 신체와 정신이 건강한 세상을 만드는 것",
+    "bullets": [
+      "Mechanical Engineering Student",
+      "Weight Training / Running / Basketball",
+      "Blog"
+    ],
+    "goals": [
+      "학부 연구생 인턴 수행하며 의료 / 로보틱스 분야 전문성 쌓기",
+      "진로 선택 폭 열어두고 자아 탐색_노션에 기록",
+      "OPIC AL 취득 (주 5회 영어 공부 - 스픽/AI토킹)",
+      "블로그 주 1회 발행 (연구 / 영어 / 경제 / 독서)",
+      "CV, 포트폴리오 완성하기 (노션/PPT/링크드인)",
+      "주 2회 헬스 유지 / 건강식 유지",
+      "미국 교환학생 / 미국 로보틱스 랩실에서 학부 인턴 컨택하기"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/hyeonjung-seong-092620366",
+      "email": "sunghyju@gmail.com"
+    },
+    "generation": 3
   }
 ]

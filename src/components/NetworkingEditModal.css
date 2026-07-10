@@ -1,0 +1,126 @@
+.netEditModal {
+  max-width: 600px;
+}
+
+/* ── 날짜 ── */
+.netDateWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.netDateIcon {
+  position: absolute;
+  left: 12px;
+  font-size: 15px;
+  pointer-events: none;
+  z-index: 1;
+}
+.netDateInput {
+  padding-left: 36px !important;
+  color-scheme: dark;
+}
+
+/* ── 유형 버튼 ── */
+.netTypeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+.netTypeBtn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.netTypeBtn:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+}
+.netTypeBtn.active {
+  background: rgba(100, 210, 245, 0.15);
+  border-color: rgba(100, 210, 245, 0.5);
+  color: rgba(100, 210, 245, 0.95);
+}
+
+/* ── 참여자 ── */
+.netParticipantsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.netSelectedChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.netSelectedChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(100, 210, 245, 0.15);
+  border: 1px solid rgba(100, 210, 245, 0.35);
+  color: rgba(100, 210, 245, 0.9);
+  font-size: 12px;
+}
+.netChipRemove {
+  background: none;
+  border: none;
+  color: rgba(100, 210, 245, 0.6);
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0;
+  line-height: 1;
+}
+.netChipRemove:hover { color: rgba(255, 100, 100, 0.8); }
+
+.netParticipantsColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.netManualInput {
+  width: 100%;
+}
+
+.netMemberBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 160px;
+  overflow-y: auto;
+  padding: 2px;
+}
+.netMemberBtns::-webkit-scrollbar { width: 4px; }
+.netMemberBtns::-webkit-scrollbar-track { background: transparent; }
+.netMemberBtns::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+.netMemberBtn {
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.netMemberBtn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+.netMemberBtn.active {
+  background: rgba(100, 210, 245, 0.15);
+  border-color: rgba(100, 210, 245, 0.45);
+  color: rgba(100, 210, 245, 0.95);
+}

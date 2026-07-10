@@ -1,0 +1,54 @@
+.tagSphereWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+  cursor: grab;
+}
+
+.tagSphereWrap:active {
+  cursor: grabbing;
+}
+
+.tagSphereContainer {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+.tsTag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(180, 235, 255, 0.92);
+  text-shadow:
+    0 0 10px rgba(60, 180, 230, 0.60),
+    0 0 24px rgba(40, 150, 210, 0.25);
+  padding: 5px 12px;
+  border: 1px solid rgba(60, 180, 230, 0.22);
+  border-radius: 20px;
+  background: rgba(6, 18, 38, 0.35);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+  transition: opacity 0.04s linear;
+}
+
+@media (max-width: 900px) {
+  .tagSphereWrap  { height: 280px; }
+  .tagSphereContainer { width: 260px; height: 260px; }
+  .tsTag { font-size: 11px; padding: 4px 10px; }
+}
+
+@media (max-width: 600px) {
+  .tagSphereWrap  { height: 240px; }
+  .tagSphereContainer { width: 220px; height: 220px; }
+  .tsTag { font-size: 10px; padding: 3px 8px; }
+}

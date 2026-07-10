@@ -1,0 +1,656 @@
+/* ===== FAB ===== */
+.lcpFab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, rgba(30,60,130,0.95), rgba(20,40,100,0.95));
+  border: 1px solid rgba(80,160,255,0.35);
+  border-radius: 22px;
+  color: rgba(180,220,255,0.95);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 16px 9px 13px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45), 0 0 0 1px rgba(80,160,255,0.1);
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: fixed;
+}
+.lcpFab:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.5); }
+.lcpFabIcon { font-size: 14px; }
+.lcpUnreadBadge {
+  position: absolute; top: -6px; right: -6px;
+  background: #e84545; color: #fff;
+  font-size: 9px; font-weight: 800;
+  min-width: 17px; height: 17px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 4px; pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* ===== 패널 ===== */
+.lcpPanel {
+  position: fixed;
+  z-index: 999;
+  background: rgba(7,12,28,0.97);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  display: flex; flex-direction: column;
+  backdrop-filter: blur(24px);
+  transform: translateX(150vw);
+  box-shadow: -12px 0 40px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+.lcpPanelOpen {
+  transform: translateX(0);
+  transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+.lcpPanelStandalone {
+  position: absolute;
+  inset: 0; width: 100% !important; height: 100% !important;
+  border: none; border-radius: 0;
+}
+
+/* ===== 크기 조절 핸들 (모든 가장자리/모서리) ===== */
+.lcpResize { position: absolute; z-index: 11; }
+.lcpResizeN, .lcpResizeS { left: 8px; right: 8px; height: 6px; cursor: ns-resize; }
+.lcpResizeE, .lcpResizeW { top: 8px; bottom: 8px; width: 6px; cursor: ew-resize; }
+.lcpResizeN { top: -3px; }
+.lcpResizeS { bottom: -3px; }
+.lcpResizeW { left: -3px; }
+.lcpResizeE { right: -3px; }
+.lcpResizeNE, .lcpResizeNW, .lcpResizeSE, .lcpResizeSW {
+  width: 14px; height: 14px;
+}
+.lcpResizeNE { top: -4px; right: -4px; cursor: nesw-resize; }
+.lcpResizeNW { top: -4px; left: -4px; cursor: nwse-resize; }
+.lcpResizeSE { bottom: -4px; right: -4px; cursor: nwse-resize; }
+.lcpResizeSW { bottom: -4px; left: -4px; cursor: nesw-resize; }
+
+/* ===== 헤더 (드래그로 위/아래 이동) ===== */
+.lcpHeader {
+  cursor: grab;
+  user-select: none;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.02);
+}
+.lcpHeaderTitle {
+  font-size: 13px; font-weight: 800;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: -0.3px;
+}
+.lcpHeaderActions { display: flex; align-items: center; gap: 2px; position: relative; z-index: 12; }
+
+.lcpSearchToggle {
+  background: none; border: none;
+  color: rgba(255,255,255,0.35); font-size: 13px;
+  cursor: pointer; padding: 3px 7px; border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+.lcpSearchToggle:hover, .lcpSearchToggle.active {
+  color: rgba(100,160,255,0.9); background: rgba(80,140,255,0.12);
+}
+
+.lcpCloseBtn {
+  background: none; border: none;
+  color: rgba(255,255,255,0.35); font-size: 13px;
+  cursor: pointer; padding: 3px 7px; border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+.lcpCloseBtn:hover { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.07); }
+
+/* ===== 검색바 ===== */
+.lcpSearchBar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.lcpSearchInput {
+  flex: 1; background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 6px 10px;
+  font-size: 12px; color: rgba(255,255,255,0.88);
+  outline: none;
+}
+.lcpSearchInput::placeholder { color: rgba(255,255,255,0.3); }
+.lcpSearchInput:focus { border-color: rgba(80,140,255,0.4); }
+.lcpSearchClear {
+  background: none; border: none;
+  color: rgba(255,255,255,0.35); font-size: 11px;
+  cursor: pointer; padding: 4px 6px; border-radius: 6px;
+}
+.lcpSearchClear:hover { color: rgba(255,255,255,0.7); }
+
+/* ===== 맨 아래로 버튼 ===== */
+.lcpScrollBottom {
+  position: absolute; bottom: 60px; right: 14px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(60,100,220,0.85);
+  border: 1px solid rgba(100,150,255,0.3);
+  color: white; font-size: 16px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: background 0.15s;
+  z-index: 10;
+}
+.lcpScrollBottom:hover { background: rgba(80,120,255,0.95); }
+
+/* ===== 피드 ===== */
+.lcpFeed {
+  flex: 1; overflow-y: auto;
+  padding: 12px 10px 16px;
+  display: flex; flex-direction: column; gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.08) transparent;
+}
+.lcpFeed::-webkit-scrollbar { width: 3px; }
+.lcpFeed::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 3px; }
+
+.lcpDateDivider {
+  display: flex; align-items: center; gap: 8px;
+  margin: 8px 0; color: rgba(255,255,255,0.3); font-size: 11px;
+}
+.lcpDateDivider::before,
+.lcpDateDivider::after {
+  content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.08);
+}
+
+.lcpEmpty {
+  text-align: center; color: rgba(255,255,255,0.25);
+  font-size: 11px; padding: 40px 0;
+}
+
+/* ===== 행 ===== */
+.lcpRow {
+  display: flex; gap: 7px; align-items: flex-start;
+  width: 96%; /* 패널 폭 변경 시 자동 반응 */
+  align-self: flex-start;
+}
+.lcpRowMine {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+.lcpRowGrouped { margin-top: -7px; }
+.lcpAvatarSpacer { width: 28px; flex-shrink: 0; }
+
+.lcpAvatar {
+  width: 28px; height: 28px;
+  border-radius: 50%; object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.lcpAvatarClickable { cursor: pointer; transition: opacity 0.15s; }
+.lcpAvatarClickable:hover { opacity: 0.75; }
+
+.lcpBubbleWrap {
+  display: flex; flex-direction: column; gap: 3px;
+  flex: 1 1 0;   /* 아바타 옆 나머지 공간 전부 차지 */
+  min-width: 0;
+}
+.lcpRowMine .lcpBubbleWrap { align-items: flex-end; }
+
+.lcpName {
+  font-size: 11px; font-weight: 700;
+  color: rgba(100,180,255,0.85);
+  padding-left: 2px;
+}
+.lcpNameClickable { cursor: pointer; }
+.lcpNameClickable:hover { text-decoration: underline; color: rgba(140,200,255,0.95); }
+
+.lcpBubbleRow {
+  display: flex; align-items: flex-end; gap: 2px;
+  width: 100%; /* 패널 폭 변경 시에도 전체 너비 사용 */
+}
+.lcpRowMine .lcpBubbleRow { flex-direction: row-reverse; }
+
+/* 카카오톡처럼 내용 길이에 맞춰 말풍선 크기 조절 (최대 80%) */
+.lcpBubbleRow .lcpBubble {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 80%;
+}
+
+/* 완료 행 — 배지가 잘리지 않게 nowrap */
+.lcpDoneRow {
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.lcpDoneRow .lcpReplyQuote {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.lcpTime {
+  font-size: 8.5px;
+  color: rgba(255,255,255,0.25);
+  white-space: nowrap;
+  padding-bottom: 2px;
+  flex-shrink: 0; /* 우측 고정 */
+}
+
+/* ===== 말풍선 ===== */
+.lcpBubble {
+  position: relative;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 4px 12px 12px 12px;
+  padding: 8px 11px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(210,220,255,0.9);
+  word-break: break-word;
+  max-width: 100%;
+}
+.lcpBubbleMine {
+  background: linear-gradient(135deg, rgba(40,100,200,0.75), rgba(30,70,160,0.75));
+  border-color: rgba(80,140,255,0.2);
+  border-radius: 12px 4px 12px 12px;
+  color: rgba(220,235,255,0.95);
+}
+.lcpBubbleDone {
+  background: rgba(30,120,70,0.18);
+  border-color: rgba(60,200,130,0.2);
+}
+.lcpBubbleMine.lcpBubbleDone {
+  background: linear-gradient(135deg, rgba(20,90,50,0.6), rgba(15,70,40,0.6));
+}
+
+/* 계획 텍스트 (인라인) */
+.lcpPlanText { display: inline; }
+.lcpNum {
+  font-weight: 700;
+  color: rgba(100,190,255,0.95);
+  font-size: 12.5px;
+}
+.lcpBubbleMine .lcpNum { color: rgba(180,220,255,0.95); }
+.lcpColon { color: rgba(255,255,255,0.35); }
+.lcpContent { color: inherit; }
+.lcpEditedBadge { font-size: 11px; opacity: 0.55; font-style: italic; }
+
+.lcpOutsideBtnGroup {
+  flex-shrink: 0;
+  display: flex;
+  gap: 4px;
+}
+.lcpOutsideDeleteBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(230,100,100,0.9);
+  background: rgba(230,100,100,0.14);
+  border: 1px solid rgba(230,100,100,0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.lcpOutsideDeleteBtn:hover {
+  background: rgba(230,100,100,0.3);
+  color: #fff;
+}
+.lcpOutsideCompleteBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(120,220,160,0.9);
+  background: rgba(80,220,140,0.14);
+  border: 1px solid rgba(80,220,140,0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.lcpOutsideCompleteBtn:hover {
+  background: rgba(80,220,140,0.3);
+  color: #fff;
+}
+
+.lcpOutsideDeleteBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255,120,120,0.9);
+  background: rgba(255,80,80,0.14);
+  border: 1px solid rgba(255,80,80,0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.lcpOutsideDeleteBtn:hover {
+  background: rgba(255,80,80,0.3);
+  color: #fff;
+}
+
+/* reply 인용 */
+.lcpReplyQuote {
+  background: none; border: none;
+  background-color: rgba(255,255,255,0.05);
+  border-left: 2px solid rgba(80,200,140,0.6);
+  border-radius: 0 4px 4px 0;
+  padding: 4px 8px;
+  font-size: 11px;
+  color: rgba(160,210,185,0.65);
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: background 0.12s;
+}
+.lcpReplyQuote:hover { background-color: rgba(255,255,255,0.1); }
+.lcpReplyNum { font-weight: 700; color: rgba(100,210,160,0.9); }
+.lcpReplyContent { color: rgba(160,210,185,0.55); }
+.lcpReplyText {
+  font-size: 12.5px; font-weight: 700;
+  color: rgba(80,220,150,0.95);
+}
+
+/* 하이라이트 효과 */
+.lcpHighlight .lcpBubble {
+  box-shadow: 0 0 0 2px rgba(100,200,255,0.5);
+  transition: box-shadow 0.15s;
+}
+
+/* ===== 공감 영역 ===== */
+.lcpReactionArea {
+  position: relative;
+}
+.lcpReactionRow {
+  display: flex; flex-wrap: wrap; gap: 3px;
+  align-items: center;
+}
+.lcpRowMine .lcpReactionRow { justify-content: flex-end; }
+
+.lcpReactionChip {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 9px;
+  color: rgba(220,225,255,0.85);
+  font-size: 10px;
+  padding: 1px 6px;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 2px;
+  transition: background 0.12s;
+}
+.lcpReactionChip:hover:not(:disabled) { background: rgba(255,255,255,0.12); }
+.lcpReactionChip.active {
+  background: rgba(80,150,255,0.2);
+  border-color: rgba(80,150,255,0.4);
+  color: rgba(150,200,255,0.95);
+}
+.lcpReactionCnt { font-size: 9px; opacity: 0.8; }
+
+/* + 버튼 (말풍선 우측) */
+.lcpEmojiAddWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.lcpEmojiTriggerRight {
+  background: none;
+  border: 1px dashed rgba(255,255,255,0.18);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.4);
+  font-size: 10px;
+  width: 16px; height: 16px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  padding: 0;
+  line-height: 1;
+}
+.lcpEmojiTriggerRight:hover { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.8); }
+
+/* 이모지 팝오버: + 버튼 아래, 채팅 왼쪽 라인 기준 */
+.lcpEmojiPopoverFixed {
+  position: fixed;
+  background: rgba(15,22,50,0.98);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 7px 10px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  z-index: 2000;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
+
+.lcpEmojiTrigger {
+  background: rgba(255,255,255,0.04);
+  border: 1px dashed rgba(255,255,255,0.14);
+  border-radius: 9px;
+  color: rgba(255,255,255,0.35);
+  font-size: 10px;
+  padding: 1px 6px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.lcpEmojiTrigger:hover { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.75); }
+
+.lcpEmojiPopover {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 0;
+  background: rgba(15,22,50,0.98);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 6px 8px;
+  display: flex; gap: 3px;
+  z-index: 200;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.lcpRowMine .lcpEmojiPopover { left: auto; right: 0; }
+
+.lcpEmojiOpt {
+  background: none; border: none;
+  font-size: 16px; cursor: pointer;
+  padding: 3px 4px; border-radius: 6px;
+  transition: background 0.1s, transform 0.1s;
+}
+.lcpEmojiOpt:hover { background: rgba(255,255,255,0.1); transform: scale(1.15); }
+
+/* ===== 수정 버블 (보라색 계열) ===== */
+.lcpBubbleEdit {
+  background: rgba(80,80,120,0.12);
+  border-color: rgba(160,160,200,0.13);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.lcpReplyQuoteEdit {
+  border-left-color: rgba(160,160,210,0.35) !important;
+  color: rgba(180,180,210,0.5) !important;
+}
+.lcpReplyQuoteEdit .lcpReplyNum { color: rgba(180,180,220,0.7) !important; }
+.lcpEditText { color: rgba(190,190,220,0.8) !important; }
+
+/* ===== 채팅 입력창 ===== */
+.lcpInputRow {
+  display: flex; gap: 6px;
+  align-items: flex-end;
+  padding: 10px 10px 12px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.02);
+}
+.lcpInput {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  color: rgba(220,225,255,0.9);
+  font-size: 13px;
+  font-family: inherit;
+  padding: 7px 13px;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  max-height: 120px;
+  line-height: 1.4;
+  transition: border-color 0.15s;
+}
+.lcpInput::placeholder { color: rgba(255,255,255,0.25); }
+.lcpInput:focus { border-color: rgba(80,140,255,0.4); }
+.lcpSendBtn {
+  background: linear-gradient(135deg, rgba(50,110,220,0.85), rgba(30,80,180,0.85));
+  border: none; border-radius: 50%;
+  color: #fff; font-size: 14px; font-weight: 700;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.lcpSendBtn:disabled { opacity: 0.35; cursor: default; }
+.lcpSendBtn:not(:disabled):hover { transform: scale(1.08); }
+
+/* 완료 카드 */
+.lcpDoneCard {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.lcpDoneCardHeader {
+  display: flex; align-items: center; gap: 5px;
+}
+.lcpDoneCheck {
+  flex-shrink: 0;
+  background: rgba(20,160,80,0.85);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px; font-weight: 700;
+  width: 16px; height: 16px;
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+.lcpDoneCardNum {
+  font-size: 11px; font-weight: 600;
+  color: rgba(60,210,120,0.9);
+}
+.lcpDoneCardContent {
+  font-size: 12px;
+  color: rgba(180,220,200,0.7);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* ===== 모바일 ===== */
+@media (max-width: 768px) {
+  .lcpPanel {
+    width: 100vw !important;
+    height: 100dvh !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0;
+  }
+  .lcpFab { bottom: 16px; right: 16px; }
+  .lcpHeader { cursor: default; }
+  .lcpBubbleRow .lcpBubble { max-width: 86%; }
+}
+
+/* ===== 미니 프로필 카드 ===== */
+.lcpMiniOverlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+}
+.lcpMiniCard {
+  position: relative;
+  background: rgba(12,18,40,0.97);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 24px 22px 20px;
+  width: 280px; max-width: 90vw;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  backdrop-filter: blur(20px);
+}
+.lcpMiniClose {
+  position: absolute; top: 12px; right: 14px;
+  background: none; border: none;
+  color: rgba(255,255,255,0.35); font-size: 13px;
+  cursor: pointer; padding: 4px 8px; border-radius: 6px;
+}
+.lcpMiniClose:hover { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+.lcpMiniTop { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.lcpMiniAvatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  object-fit: cover; border: 2px solid rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+.lcpMiniName { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.92); }
+.lcpMiniRole { font-size: 11px; color: rgba(120,170,255,0.75); margin-top: 2px; }
+.lcpMiniQuote {
+  font-size: 12px; color: rgba(200,210,255,0.65);
+  font-style: italic; border-left: 2px solid rgba(100,140,255,0.3);
+  padding-left: 10px; margin: 0 0 10px;
+}
+.lcpMiniBullets {
+  list-style: none; padding: 0; margin: 0 0 8px;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.lcpMiniBullets li {
+  font-size: 12px; color: rgba(200,215,255,0.75);
+  padding-left: 10px; position: relative;
+}
+.lcpMiniBullets li::before {
+  content: "·"; position: absolute; left: 0;
+  color: rgba(100,150,255,0.5);
+}
+.lcpMiniGoalsLabel {
+  font-size: 10px; font-weight: 700;
+  color: rgba(120,170,255,0.6); margin-bottom: 4px; text-transform: uppercase;
+}
+.lcpMiniLinks { display: flex; gap: 8px; margin-top: 10px; }
+.lcpMiniLink {
+  font-size: 11px; color: rgba(100,160,255,0.85);
+  text-decoration: none; padding: 3px 8px;
+  border: 1px solid rgba(100,160,255,0.25); border-radius: 6px;
+}
+.lcpMiniLink:hover { background: rgba(100,160,255,0.12); }
+
+[data-theme="light"] .lcpMiniCard {
+  background: rgba(255,255,255,0.97);
+  border-color: rgba(30,90,200,0.12);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
+[data-theme="light"] .lcpMiniName { color: rgba(8,20,60,0.92); }
+[data-theme="light"] .lcpMiniRole { color: rgba(30,80,180,0.75); }
+[data-theme="light"] .lcpMiniQuote { color: rgba(60,80,140,0.65); }
+[data-theme="light"] .lcpMiniBullets li { color: rgba(20,40,100,0.80); }
+[data-theme="light"] .lcpMiniClose { color: rgba(20,40,100,0.35); }
+[data-theme="light"] .lcpMiniLink { color: rgba(30,80,200,0.85); border-color: rgba(30,80,200,0.25); }
+
+
+.lcpLoadMoreBtn {
+  display: block; width: calc(100% - 24px); margin: 8px 12px;
+  padding: 7px; border-radius: 8px; font-size: 12px; font-weight: 600;
+  background: rgba(50,150,235,0.10); border: 1px solid rgba(50,150,235,0.22);
+  color: rgba(130,195,240,0.80); cursor: pointer; font-family: inherit;
+  transition: background 0.15s;
+}
+.lcpLoadMoreBtn:hover { background: rgba(50,150,235,0.20); }
+.lcpLoadingMore {
+  text-align: center; font-size: 12px; padding: 8px;
+  color: rgba(130,170,220,0.55);
+}
